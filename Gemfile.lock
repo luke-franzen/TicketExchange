@@ -76,11 +76,8 @@ GEM
     cucumber-wire (0.0.1)
     database_cleaner (1.5.3)
     debug_inspector (0.0.2)
-<<<<<<< HEAD
-    docile (1.1.5)
-=======
     diff-lcs (1.2.5)
->>>>>>> a6518e5d9f4744a5eea443fb5ac03fa6d8cfa72e
+    docile (1.1.5)
     erubis (2.7.0)
     execjs (2.7.0)
     gherkin (4.0.0)
