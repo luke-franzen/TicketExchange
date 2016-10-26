@@ -19,8 +19,8 @@ games.each do |game|
     Game.create!(game)
 end
 
-users = [{:user_id => "jacksparrow", :email => "jack_sparrow@gmail.com"},
-         {:user_id => "pizza", :email => "pizza@gmail.com"}]
+users = [{:user_id => "jacksparrow", :user_first => "jack", :user_last => "sparrow", :email => "jack_sparrow@gmail.com"},
+         {:user_id => "pizza", :user_first => "pizza", :user_last => "hut", :email => "pizza@gmail.com"}]
 
 users.each do |user|
     User.create!(user)
