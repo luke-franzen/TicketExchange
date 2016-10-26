@@ -18,3 +18,11 @@ games = [{:name => "Miami RedHawks", :date => "3-Sep-2016"},
 games.each do |game|
     Game.create!(game)
 end
+
+users = [{:user_id => "jacksparrow", :email => "jack_sparrow@gmail.com"},
+         {:user_id => "pizza", :email => "pizza@gmail.com"}]
+
+users.each do |user|
+    User.create!(user)
+end
+
