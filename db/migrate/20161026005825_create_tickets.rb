@@ -21,7 +21,7 @@ class CreateTickets < ActiveRecord::Migration
     create_table :tickets do |t|
       t.belongs_to :user, index: true
       t.belongs_to :game, index: true
-      t.int :price
+      t.integer :price
       
       t.timestamps
     end

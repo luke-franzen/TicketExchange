@@ -11,20 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026000955) do
+ActiveRecord::Schema.define(version: 20161026005825) do
+
+  create_table "games", force: :cascade do |t|
+    t.string   "name"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tickets", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "tickets_users", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "ticket_id"
-  end
-
-  add_index "tickets_users", ["ticket_id"], name: "index_tickets_users_on_ticket_id"
-  add_index "tickets_users", ["user_id"], name: "index_tickets_users_on_user_id"
+  add_index "tickets", ["game_id"], name: "index_tickets_on_game_id"
+  add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
   create_table "users", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "email"
+    t.string   "password"
+    t.float    "rating"
+    t.string   "session_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
