@@ -1,8 +1,10 @@
-class CreateTickets < ActiveRecord::Migration
+class CreateTables < ActiveRecord::Migration
   #creating a many-to-many relationship between users and tickets
   def change
     create_table :users do |t|
       t.string :user_id
+      t.string :user_first
+      t.string :user_last
       t.string :email
       t.string :password
       t.float :rating
