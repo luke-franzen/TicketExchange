@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-    has_and_belongs_to_many :tickets
+    has_many :tickets
+    has_many :games, :through => :tickets
 end
