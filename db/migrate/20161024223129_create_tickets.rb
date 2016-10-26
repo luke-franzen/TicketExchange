@@ -7,7 +7,6 @@ class CreateTickets < ActiveRecord::Migration
       t.string :type
       
       t.timestamps
-      
     end
   end
 end
