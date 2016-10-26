@@ -30,6 +30,13 @@
 		                        </div>
 		                        <button type="submit" class="btn">Log in</button>
 		                    </form>
+		                    <%= form_tag users_path, :id=>'login_form', :method => 'post' do %>
+		                    	<%= label_tag(:email, "Email") %>
+		                    	<%= text_field_tag(:email) %>
+		                    	<%= label_tag(:password, "Password") %>
+		                    	<%= text_field_tag(:password) %>
+		                        <%= submit_tag("Log in") %>
+		                    <% end %>
 	                    </div>
                     </div>
                 </div>
