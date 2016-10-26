@@ -39,6 +39,6 @@ When you are done using the app, you can kill the rails server by typing:
 
 Ctrl-c
 
-Have fun.
+Have fun. :)
 
 =end
