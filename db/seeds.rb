@@ -20,9 +20,23 @@ games.each do |game|
 end
 
 users = [{:user_id => "jacksparrow", :user_first => "jack", :user_last => "sparrow", :email => "jack_sparrow@gmail.com"},
-         {:user_id => "pizza", :user_first => "pizza", :user_last => "hut", :email => "pizza@gmail.com"}]
+         {:user_id => "pizza", :user_first => "pizza", :user_last => "hut", :email => "pizza@gmail.com"},
+         {:user_id => "ironman", :user_first => "tony", :user_last => "stark", :email => "tonystark@gmail.com"},
+         {:user_id => "spiderman", :user_first => "peter", :user_last => "parker", :email => "peter_parker@gmail.com"}]
 
 users.each do |user|
     User.create!(user)
 end
 
+rnum = Random.new()
+games.each do |game|
+    game_obj = Game.find_by_name(game[:name])
+    users.each do |user|
+        user_obj = User.find_by_user_id(user[:user_id])
+        user_obj.tickets << Ticket.create!(:game_id => game_obj.id, :price => rnum.rand(20..120))
+    end
+end
+
+#demento = Physician.find_by_name('Dr. Demento'}
+#patient = Patient.new { :name => 'Mrs. Holloway' }
+#patient.appointments << Appointment.new { :physician => demento, :appointment_time => appt_time }
