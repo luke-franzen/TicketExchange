@@ -24,6 +24,7 @@ class CreateTables < ActiveRecord::Migration
       t.belongs_to :user, index: true
       t.belongs_to :game, index: true
       t.integer :price
+      t.string :ticket_type
       
       t.timestamps
     end

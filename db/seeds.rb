@@ -33,7 +33,7 @@ games.each do |game|
     game_obj = Game.find_by_name(game[:name])
     users.each do |user|
         user_obj = User.find_by_user_id(user[:user_id])
-        user_obj.tickets << Ticket.create!(:game_id => game_obj.id, :price => rnum.rand(20..120))
+        user_obj.tickets << Ticket.create!(:game_id => game_obj.id, :price => rnum.rand(20..120), :ticket_type => "student")
     end
 end
 
