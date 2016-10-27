@@ -30,7 +30,8 @@
     <div id="navbar" class="navbar-collapse collapse">
       <form class="navbar-form navbar-right">
         <ul class="nav navbar-nav">
-            <li><%= link_to "Sign Up/Login", new_user_path, :id => "login-link" %></li>
+
+            <li><%= link_to "Sign Up/Login", new_user_url, :id => "login-link"%></li>
             <li><%= button_to "Sell your Ticket", root_path, :id => "sell-ticket-btn", :class => "btn btn-success", :method => :get %></li>
         </ul>
 
