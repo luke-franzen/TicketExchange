@@ -48,27 +48,30 @@
                     			<i class="fa fa-pencil"></i>
                     		</div>
                         </div>
+
+
                         <div class="form-bottom">
-		                    <%= form_tag users_path, :id=>'login_form', :method => 'post' do %>
+		                    <%= form_for(@user) do |f| %>
+		                    	<%= render 'shared/error_messages' %>
 		                    	<div class="form-group">
-	                    			<%= label :user, :first_name, "first Name", :class => 'sr-only' %>
-	                    			<%= text_field :user, :first_name, :placeholder => 'First Name', :class => 'form-first-name form-control' %>
+	                    			<%= f.label :first_name, "first Name", :class => 'sr-only' %>
+	                    			<%= f.text_field :first_name, :placeholder => 'First Name', :class => 'form-first-name form-control' %>
 		                        </div>
 		                        <div class="form-group">
-	                    			<%= label :user, :last_name, "Last Name", :class => 'sr-only' %>
-	                    			<%= text_field :user, :last_name, :placeholder => 'Last Name', :class => 'form-last-name form-control' %>
+	                    			<%= f.label :last_name, "Last Name", :class => 'sr-only' %>
+	                    			<%= f.text_field :last_name, :placeholder => 'Last Name', :class => 'form-last-name form-control' %>
 		                        </div>
 		                        <div class="form-group">
-	                    			<%= label :user, :email, "Email", :class => 'sr-only' %>
-	                    			<%= text_field :user, :email, :placeholder => 'Email', :class => 'form-email form-control' %>
+	                    			<%= f.label :email, "Email", :class => 'sr-only' %>
+	                    			<%= f.text_field :email, :placeholder => 'Email', :class => 'form-email form-control' %>
 	                    		</div>
 		                        <div class="form-group">
-									<%= label :user, :password, "Password", :class => 'sr-only' %>
-	                    			<%= password_field :user, :password, :placeholder => 'Password', :class => 'form-password form-control' %>
+									<%= f.label :password, "Password", :class => 'sr-only' %>
+	                    			<%= f.password_field :password, :placeholder => 'Password', :class => 'form-password form-control' %>
 								</div>
 		                        <div class="form-group">
-									<%= label :user, :password_confirmation, "Confirm Password", :class => 'sr-only' %>
-	                    			<%= password_field :user, :password_confirmation, :placeholder => 'Confirm Password', :class => 'form-password form-control' %>
+									<%= f.label :password_confirmation, "Confirm Password", :class => 'sr-only' %>
+	                    			<%= f.password_field :password_confirmation, :placeholder => 'Confirm Password', :class => 'form-password form-control' %>
 								</div>
 		                        <%= button_tag("Sign up", :type => 'submit', :class => 'btn') %>
 		                    <% end %>
