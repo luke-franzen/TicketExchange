@@ -14,25 +14,26 @@ games = [{:name => "Miami RedHawks", :date => "3-Sep-2016"},
          {:name => "Michigan Wolverines", :date => "12-Nov-2016"},
          {:name => "Nebraska Cornhuskers", :date => "25-Nov-2016"}
     ]
-    
+
 games.each do |game|
     Game.create!(game)
 end
 
-users = [{:user_id => "jacksparrow", :user_first => "jack", :user_last => "sparrow", :email => "jack_sparrow@gmail.com"},
-         {:user_id => "pizza", :user_first => "pizza", :user_last => "hut", :email => "pizza@gmail.com"},
-         {:user_id => "ironman", :user_first => "tony", :user_last => "stark", :email => "tonystark@gmail.com"},
-         {:user_id => "spiderman", :user_first => "peter", :user_last => "parker", :email => "peter_parker@gmail.com"}]
+#TODO: determine way to hash these passwords
+users = [{:first_name => "jack", :last_name => "sparrow", :email => "jack_sparrow@gmail.com", :password => "password1", :password_confirmation => "password1"},
+         {:first_name => "pizza", :last_name => "hut", :email => "pizza@gmail.com", :password => "password2", :password_confirmation => "password2"},
+         {:first_name => "tony", :last_name => "stark", :email => "tonystark@gmail.com", :password => "password3", :password_confirmation => "password3"},
+         {:first_name => "peter", :last_name => "parker", :email => "peter_parker@gmail.com", :password => "password4", :password_confirmation => "password4"}]
 
 users.each do |user|
-    User.create!(user)
+    User.create(user)
 end
 
 rnum = Random.new()
 games.each do |game|
     game_obj = Game.find_by_name(game[:name])
     users.each do |user|
-        user_obj = User.find_by_user_id(user[:user_id])
+        user_obj = User.find_by_email(user[:email])
         user_obj.tickets << Ticket.create!(:game_id => game_obj.id, :price => rnum.rand(20..120), :ticket_type => "student")
     end
 end

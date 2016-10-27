@@ -33,15 +33,16 @@ ActiveRecord::Schema.define(version: 20161026021603) do
   add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "user_id"
-    t.string   "user_first"
-    t.string   "user_last"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
-    t.string   "password"
+    t.string   "password_digest"
     t.float    "rating"
     t.string   "session_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
