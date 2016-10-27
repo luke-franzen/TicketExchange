@@ -20,9 +20,10 @@ games.each do |game|
 end
 
 users = [{:user_id => "jacksparrow", :user_first => "jack", :user_last => "sparrow", :email => "jack_sparrow@gmail.com"},
-         {:user_id => "pizza", :user_first => "pizza", :user_last => "hut", :email => "pizza@gmail.com"}]
+         {:user_id => "pizza", :user_first => "pizza", :user_last => "hut", :email => "pizza@gmail.com"},
+         {:user_id => "ironman", :user_first => "tony", :user_last => "stark", :email => "tonystark@gmail.com"},
+         {:user_id => "spiderman", :user_first => "peter", :user_last => "parker", :email => "peter_parker@gmail.com"}]
 
 users.each do |user|
     User.create!(user)
-end
-
+ end
