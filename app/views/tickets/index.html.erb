@@ -1,5 +1,10 @@
 <div id="maincontent">
+  <h1> <%= @game.name %> </h1>
+  <h2> vs. </h2>
+  <h1> Iowa Hawkeyes </h1>
+  <br>
   <table class="table table-nonfluid table-condensed table-striped table-bordered table-hover text-centered">
+    <h4> <%= @game.date.to_date.strftime("%B %d, %Y") + " @ Kinnick Stadium" %> </h4>
     <thead>
       <tr>
         <th style="text-align:center" colspan="1">Seller Name</th>
