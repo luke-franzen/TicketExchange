@@ -21,7 +21,7 @@ end
 
 #TODO: determine way to hash these passwords
 users = [{:first_name => "Jack", :last_name => "Sparrow", :email => "jack_sparrow@gmail.com", :password => "password1", :password_confirmation => "password1"},
-         {:first_name => "Pizza", :last_name => "Hut", :email => "pizza@gmail.com", :password => "password2", :password_confirmation => "password2"},
+         {:first_name => "Elliot", :last_name => "Alderson", :email => "mr_robot@gmail.com", :password => "password2", :password_confirmation => "password2"},
          {:first_name => "Tony", :last_name => "Stark", :email => "tonystark@gmail.com", :password => "password3", :password_confirmation => "password3"},
          {:first_name => "Peter", :last_name => "Parker", :email => "peter_parker@gmail.com", :password => "password4", :password_confirmation => "password4"}]
 

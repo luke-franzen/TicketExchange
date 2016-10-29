@@ -1,9 +1,9 @@
-<div id="maincontent">
+<div class="tickets" id = "ticket_box">
   <h1> <%= @game.name %> </h1>
   <h2> vs. </h2>
   <h1> Iowa Hawkeyes </h1>
-  <br>
-  <table class="table table-nonfluid table-condensed table-striped table-bordered table-hover text-centered">
+  <br><br><br>
+  <table class="table table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
     <h4> <%= @game.date.to_date.strftime("%B %d, %Y") + " @ Kinnick Stadium" %> </h4>
     <thead>
       <tr>
