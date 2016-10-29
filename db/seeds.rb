@@ -37,7 +37,3 @@ games.each do |game|
         user_obj.tickets << Ticket.create!(:game_id => game_obj.id, :price => rnum.rand(20..120), :ticket_type => "student")
     end
 end
-
-#demento = Physician.find_by_name('Dr. Demento'}
-#patient = Patient.new { :name => 'Mrs. Holloway' }
-#patient.appointments << Appointment.new { :physician => demento, :appointment_time => appt_time }
