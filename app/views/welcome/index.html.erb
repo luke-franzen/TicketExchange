@@ -21,6 +21,8 @@
 </div>
 <div class="container" id="quickTickets">
     <% Game.all.each do |game| %>
-        <h1> <%= game.name  %> </h1>
+        <h1>
+            <%= link_to game.name, game_tickets_path(game.id) %>
+        </h1>
     <%end%>
 </div>
