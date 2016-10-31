@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'welcome/index'
   post 'welcome/search_game'
 
@@ -7,13 +9,15 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-    resources :users
-    resources :sessions, only: [:new, :create, :destroy]
-    
-    resources :games do 
-      get :autocomplete_game_name, :on => :collection
-      resources :tickets
-    end
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+  resources :games do
+    get :autocomplete_game_name, :on => :collection
+    resources :tickets
+  end
+  match '/login', to: 'sessions#new', via: :get
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
