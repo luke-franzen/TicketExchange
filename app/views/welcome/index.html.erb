@@ -2,16 +2,18 @@
     <div class="container" background="http://pictures.replayphotos.com/images/IOWA/lg/university-of-iowa-panoramas-automatically-imported-penn-state-v-iowa-iowa-p-auto-00020lg.jpg">
         <div class="featurette">
             <div class="featurette-inner text-center">
-              <form role="form" class="search">
-                 <h1 id="landingMoto">Where Hawkeyes can buy and sell tickets</h1>
-                 <div class="input-group input-group-lg form-inline">
-                    
-                    <input type="search" style = "text-align: center" placeholder="Search for Game" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-search"></i> Search</button>
-                    </span>
-                 </div>
-              </form>
+                <h1 id="landingMoto">Where Hawkeyes can buy and sell tickets</h1>
+                <%= form_tag welcome_search_game_path, method: "post", class: "search" do %>
+                     <div class="input-group input-group-lg form-inline">
+                        <%= text_field_tag :search_game, params[:searh_game], data: { autocomplete: autocomplete_game_name_games_path }, class: "form-control", style: "text-align: center",  placeholder: "Search for Game" %>
+                                <span class="input-group-btn">
+                            <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+                                 <i class="glyphicon glyphicon-search"></i>
+                            <% end %>
+                             
+                                </span>
+                     </div>
+                <% end %>
                 <%= link_to "/#quickTickets" do %>
                     <i class="glyphicon glyphicon-chevron-down white"></i>
                 <% end %>

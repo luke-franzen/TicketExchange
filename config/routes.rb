@@ -1,17 +1,19 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-
+  post 'welcome/search_game'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-  resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :games do 
-    resources :tickets
-  end
+    resources :users
+    resources :sessions, only: [:new, :create, :destroy]
+    
+    resources :games do 
+      get :autocomplete_game_name, :on => :collection
+      resources :tickets
+    end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
