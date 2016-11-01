@@ -14,7 +14,7 @@ class TicketsController < ApplicationController
         @ticket = Ticket.new(ticket_params)
         if @ticket.save
             @current_user.tickets << @ticket
-            flash[:notice] = "#{Game.find_by_id(@ticket.game_id).name} ticket was successfully posted."
+            flash[:notice] = "Your #{Game.find_by_id(@ticket.game_id).name} ticket was successfully posted."
             redirect_to game_tickets_path(@ticket.game_id)
         else
             flash[:notice] = "Invalid ticket submission."
