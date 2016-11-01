@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :tickets
   resources :games do
     get :autocomplete_game_name, :on => :collection
     resources :tickets

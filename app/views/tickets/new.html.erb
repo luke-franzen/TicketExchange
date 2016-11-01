@@ -1,0 +1,40 @@
+<!-- Top content -->
+<div class="top-content">
+
+    <div class="inner-bg">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-sm-5">
+
+                	<div class="form-box">
+                    	<div class="form-top">
+                    		<div class="form-top-left">
+                    			<h3>Sell Your Ticket</h3>
+                    		</div>
+                        </div>
+                        <div class="form-bottom">
+		                    <%= form_for(@ticket) do |f| %>
+		                    	<div class="form-group">
+		                    		<%= f.label(:game_id, "Game") %><br>
+		                    		<%= f.select(:game_id, options_for_select(Game.all.collect{ |g| [g.name, g.id]})) %>
+		                    	</div>
+		                    	<div class="form-group">
+									<%= f.label(:ticket_type, "Ticket Type") %><br>
+		                    		<%= f.select(:ticket_type, options_for_select(Ticket.all_types)) %>
+								</div>
+								<div class="form-group">
+									<%= f.label(:price, "Price") %><br>
+		                    		<%= f.number_field(:price, :min => 0.00, :max => 1000.00, :step => 0.01) %>
+								</div>
+		                        <%= button_tag("Post for Sale", :type => 'submit', :class => 'btn') %>
+		                    <% end %>
+	                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

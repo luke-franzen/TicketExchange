@@ -8,6 +8,7 @@
     <thead>
       <tr>
         <th style="text-align:center" colspan="1">Seller Name</th>
+        <th style="text-align:center" colspan="1">Game</th>
         <th style="text-align:center" colspan="1">Ticket Type</th>
         <th style="text-align:center" colspan="1">Price</th>
         <th style="text-align:center" colspan="1">Actions</th>
@@ -19,6 +20,7 @@
         <% user = User.find_by_id(ticket.user_id) %>
         <tr>
           <td> <%= user.first_name + " " + user.last_name %> </td>
+          <td> <%= Game.find_by_id(ticket.game_id).name %> </td>
           <td> <%= ticket.ticket_type %> </td>
           <td> $<%= ticket.price %> </td>
           <td> <button type="button" id="buy_button">Buy Me</button></td>
