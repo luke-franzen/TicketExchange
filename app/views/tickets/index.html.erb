@@ -20,7 +20,7 @@
         <tr>
           <td> <%= user.first_name + " " + user.last_name %> </td>
           <td> <%= ticket.ticket_type %> </td>
-          <td> $<%= ticket.price %> </td>
+          <td> $<%= '%.02f' % ticket.price %> </td>
           <td> <button type="button" id="buy_button">Buy Me</button></td>
         </tr>
       <% end %>

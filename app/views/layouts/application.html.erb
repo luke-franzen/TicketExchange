@@ -31,7 +31,7 @@
         <ul class="nav navbar-nav">
           <% if @current_user %>
             <li><%= link_to "Logout", logout_path, :method => 'delete', :id => "logout-link"%></li>
-            <li><%= button_to "Sell your Ticket", root_path, :id => "sell-ticket-btn", :class => "btn btn-success navbar-btn", :method => :get %></li>
+            <li><%= link_to "Sell your Ticket", new_ticket_url, :id => "sell-ticket-btn"%></li>
           <% else %>
             <li><%= link_to "Sign Up/Login", new_user_url, :id => "login-link"%></li>
           <% end %>
