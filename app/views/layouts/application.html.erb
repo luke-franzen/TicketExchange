@@ -29,7 +29,6 @@
     <div id="navbar" class="navbar-collapse collapse">
       <form class="navbar-form navbar-right">
         <ul class="nav navbar-nav">
-          <%= p @current_user %>
           <% if @current_user %>
             <li><%= link_to "Logout", logout_path, :method => 'delete', :id => "logout-link"%></li>
             <li><%= button_to "Sell your Ticket", root_path, :id => "sell-ticket-btn", :class => "btn btn-success navbar-btn", :method => :get %></li>
