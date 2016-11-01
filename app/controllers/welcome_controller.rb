@@ -1,11 +1,12 @@
 class WelcomeController < ApplicationController
+before_filter :set_current_user
 
 autocomplete :game, :name
-  
+
   def index
     @games = Game.all
   end
-  
+
   def search_game
     puts params[:search_game]
     if(params[:search_game].nil? || params[:search_game].empty?)
@@ -22,5 +23,5 @@ autocomplete :game, :name
     end
   end
 
-  
+
 end
