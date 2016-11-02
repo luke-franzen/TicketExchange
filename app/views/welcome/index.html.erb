@@ -24,7 +24,7 @@
 <div class="container" id="quickTickets">
     <% @games.each do |game| %>
         <h2>
-            <%= link_to game.name, game_tickets_path(game.id) %>
+            <%= link_to game.name, game_tickets_path(game.id), :id => "gameid_"+game.id.to_s %>
         </h2>
     <%end%>
 </div>
