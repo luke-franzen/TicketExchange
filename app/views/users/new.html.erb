@@ -21,11 +21,11 @@
                         <div class="form-bottom">
 		                    <%= form_tag sessions_path, :method => 'post' do %>
 		                    	<div class="form-group">
-		                    		<%= label :session, :email %>
+		                    		<%= label :session, :email, :class => 'sr-only' %>
 		                    		<%= email_field :session, :email, :placeholder => 'Email', class: 'form-control' %>
 		                    	</div>
 								<div class="form-group">
-		                    		<%= label :session, :password %>
+		                    		<%= label :session, :password, :class => 'sr-only' %>
 		                    		<%= password_field :session, :password, :placeholder => 'Password', class: 'form-control' %>
 								</div>
 		                        <%= button_tag("Log in", :type => 'submit', :class => 'btn') %>
