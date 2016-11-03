@@ -22,7 +22,7 @@
     </div>
 </div>
 <div class="container" id="quickTickets">
-    <% @games.each do |game| %>
+    <% Game.all.each do |game| %>
         <h2>
             <%= link_to game.name, game_tickets_path(game.id), :id => "gameid_"+game.id.to_s %>
         </h2>

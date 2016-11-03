@@ -1,4 +1,4 @@
-Feature: User should be able to login to their accoutn
+Feature: User should be able to login to their account
 
 Scenario: go to the login page
   Given I am on the home page
