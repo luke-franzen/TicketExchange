@@ -1,5 +1,4 @@
 Feature: User should be able to view tickets for sale without logging in
- 
     Scenario: viewing tickets without logging in
         Given the following games have been added to Iowa Ticket Exchange:
               | name                      |     date          |
@@ -14,6 +13,6 @@ Feature: User should be able to view tickets for sale without logging in
         And I am on the homepage of the TicketExchange site
      
             When I am not logged in
-            And I click "Iowa State Cyclones"
+            And I click "Northwestern Wildcats"
             Then I should see all of the tickets for that game
             

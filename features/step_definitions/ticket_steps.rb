@@ -1,4 +1,4 @@
-# Completed step definition for tickets_view.feature
+# Completed step definition for tickets_view, tickets_search
 
 Given /^the following games have been added to Iowa Ticket Exchange:$/ do |games_table|
     games_table.hashes.each do |game|
@@ -28,3 +28,8 @@ And /^I am on the homepage of the TicketExchange site$/ do
    tickets = Ticket.all
    page.all('table#ticket_table tr').count.should == tickets.length + 1
    end
+   
+When /^I search for "(.*?)" and click search$/ do |game|
+    fill_in 'search_game', with: game.to_s
+    click_button ('search_game_btn')
+end
