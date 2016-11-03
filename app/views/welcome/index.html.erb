@@ -7,7 +7,7 @@
                      <div class="input-group input-group-lg form-inline">
                         <%= text_field_tag :search_game, params[:searh_game], data: { autocomplete: autocomplete_game_name_games_path }, class: "form-control", style: "text-align: center",  placeholder: "Search for Game" %>
                                 <span class="input-group-btn">
-                            <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+                            <%= button_tag(type: 'submit', class: "btn btn-primary", :id => "search_game_btn") do %>
                                  <i class="glyphicon glyphicon-search"></i>
                             <% end %>
                              
