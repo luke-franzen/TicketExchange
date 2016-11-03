@@ -15,4 +15,5 @@ Feature: User should be able to view tickets for sale without logging in
      
             When I am not logged in
             And I click "Iowa State Cyclones"
-            Then I should see all of the tickets for the Iowa State Game
+            Then I should see all of the tickets for that game
+            

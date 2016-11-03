@@ -19,11 +19,12 @@ And /^I am on the homepage of the TicketExchange site$/ do
   end
  end
 
- And /^I click "Iowa State Cyclones"$/ do
-    click_link('gameid_2')
+ And /^I click "(.*?)"$/ do |game|
+    game = Game.find_by_name(game)
+    click_link('gameid_'+game.id.to_s)
  end
 
- Then /^I should see all of the tickets for the Iowa State Game$/ do
+ Then /^I should see all of the tickets for that game$/ do
    tickets = Ticket.all
    page.all('table#ticket_table tr').count.should == tickets.length + 1
    end
