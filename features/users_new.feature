@@ -1,13 +1,13 @@
 Feature: User should be able to sign up for an account
 
-Scenario: go to the login page
+Scenario: go to the signup page
   Given I am on the home page
   When I click sign up
   Then I should see the sign up page
 
 Scenario: sign up with bad credentials
   Given I am on the sign up page
-  When I fill out the form with the following attributes:
+  When I fill out the signup form with the following attributes:
     | first_name       | Bob               |
     | last_name        | McBobberson       |
     | email            | invalid_email.com |
