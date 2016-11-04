@@ -8,7 +8,6 @@ autocomplete :game, :name
   end
 
   def search_game
-    puts params[:search_game]
     if(params[:search_game].nil? || params[:search_game].empty?)
       flash[:notice] = "Invalid search term"
       redirect_to welcome_index_path
@@ -18,7 +17,7 @@ autocomplete :game, :name
         flash[:notice] = "No matching games. Please select a game"
         redirect_to welcome_index_path
       else
-        redirect_to game_tickets_path(@game.id)
+        redirect_to game_tickets_path(@game.id())
       end
     end
   end
