@@ -1,16 +1,6 @@
 =begin rdoc
 
-This directory contains the basic Rotten Potatoes rails app that we will use
-and enhance througout the semester.
-
-You can copy this directory to your Cloud9 wokspace by first forking the SELT/RottenPotatoes
-GitHub repo to your GitHub account and then cloning it to your Cloud9 workspace.  You do NOT
-need to make your GitHub repo private.
-
-Before running the app, change into the top-level directory--i.e. the one 
-containing this README file--and enter the following commands to install gems
-and set up and initialize the database  (You only need to do this before running
-the app for the first time:
+If you are starting from scratch, run these commands
 
 bundle install
 
@@ -40,5 +30,9 @@ When you are done using the app, you can kill the rails server by typing:
 Ctrl-c
 
 Have fun. :)
+
+
+Heroku URL: https://shielded-plains-76564.herokuapp.com/ 
+
 
 =end
