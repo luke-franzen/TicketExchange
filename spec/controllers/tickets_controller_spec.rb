@@ -3,8 +3,8 @@ require 'rails_helper'
 
 describe TicketsController do
     describe 'Posting a ticket' do
-        before{(@game=Game.new(name: "Iowa State Cyclones", date: "10-Sep-2016"))
-                (@current_user=User.new(first_name: "John", last_name: "Smith", email: "jsmith@gmail.com", password_digest: "password",
+        before{(@game=Game.new(id: 1, name: "Iowa State Cyclones", date: "10-Sep-2016"))
+                (@current_user=User.new(id: 1, first_name: "John", last_name: "Smith", email: "jsmith@gmail.com", password_digest: "password",
                     rating: 5))
                 #@ticket2=Ticket.new(game_id: @game.id, price: 40, ticket_type: "student")
                 #@current_user.tickets << @ticket2
@@ -21,11 +21,11 @@ describe TicketsController do
         end
         
         it 'should flash a message saying successful ticket' do
-            #expect(Ticket).to receive(:new).with(@game.id)
+            #expect(Ticket).to receive(:new).with(game_id: @game.id, user_id: @current_user.id)
             #expect(@current_user.tickets).to eq(@ticket)
             #expect(flash[:notice]).to match("Your ticket was successfully posted.")
             #expect(response).to redirect_to(game_tickets_path(@ticket.game_id))
-            #post :create, {:ticket => {:game_id => @game.id}}
+            #post :create, {:ticket => {game_id: @game.id, user_id: @current_user.id}}
         end
         
         it 'should flash a message and redirect if incorrect ticket' do
