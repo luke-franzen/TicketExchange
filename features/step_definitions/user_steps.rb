@@ -36,4 +36,3 @@ When /^I fill out the signup form with the following attributes:$/ do |form_tabl
    fill_in('user_password_confirmation', :with => form["password_confirmation"])
   end
 end
-
