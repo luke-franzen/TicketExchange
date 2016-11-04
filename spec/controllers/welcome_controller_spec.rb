@@ -27,7 +27,7 @@ describe WelcomeController do
            allow(@game).to receive(:id).and_return(1)
            post :search_game, {"search_game" => "Miami RedHawks"}
            
-           expect(subject).to redirect_to(welcome_index_path)
+           expect(subject).to redirect_to(game_tickets_path)
         end
         
         
