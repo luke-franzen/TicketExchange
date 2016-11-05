@@ -35,6 +35,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-ui-rails'
 gem 'rails-jquery-autocomplete'
 
+gem 'jquery-tablesorter'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end

@@ -15,4 +15,8 @@
 //= require jquery-ui/autocomplete
 //= require autocomplete-rails
 //= require turbolinks
+//= require jquery-tablesorter
+
+//= require jquery-tablesorter/jquery.tablesorter
+
 //= require_tree .

@@ -2,15 +2,35 @@
   <h1> <%= @game.name %> </h1>
   <h2> vs. </h2>
   <h1> Iowa Hawkeyes </h1>
+  <script id="js">$(function() {
+
+	// initial sort set using sortList option
+	$(".table1").tablesorter({
+		theme : 'default',
+		// sort on the first column and second column in ascending order
+		sortList: [[2,0]],
+		headers: {
+      // disable sorting of the first & second column - before we would have to had made two entries
+      // note that "first-name" is a class on the span INSIDE the first column th cell
+      '.ticketType, .actionsHeader' : { //add .sellerName to prevent sort by name, remove .ticketType to allow sort by ticket type
+                                    //this is especially useful if we add other ticket types, since you can shift-click to select a secondary column sort ie "sort by ticket type, then sort within those groups by price"
+        // disable it by setting the property sorter to false
+        sorter: false
+      }
+    }
+	});
+  });
+  </script>
+  
   <br><br><br>
-  <table class="table table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
+  <table class="table1 table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
     <h4> <%= @game.date.to_date.strftime("%B %d, %Y") + " @ Kinnick Stadium" %> </h4>
     <thead>
       <tr>
-        <th style="text-align:center" colspan="1">Seller Name</th>
-        <th style="text-align:center" colspan="1">Ticket Type</th>
+        <th style="text-align:center" class="sellerName" colspan="1">Seller Name</th>
+        <th style="text-align:center" class="ticketType" colspan="1">Ticket Type</th>
         <th style="text-align:center" colspan="1">Price</th>
-        <th style="text-align:center" colspan="1">Actions</th>
+        <th style="text-align:center" class="actionsHeader" colspan="1">Actions</th>
       </tr>
     </thead>
     
