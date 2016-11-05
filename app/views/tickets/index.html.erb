@@ -22,7 +22,19 @@
   });
   </script>
   
-  <br><br><br>
+  
+  <% total = 0.0 %>
+  <% count = 0 %>
+  <% low = 999999999999 %> <!-- how do i set this to float MAX?? -->
+  <% @tickets.each do |ticket| %>
+    <% if ticket.price<low %>
+      <% low=ticket.price %>
+    <% end %>
+    <% total += ticket.price %>
+    <% count += 1 %>
+  <% end %>
+  <span id="averageTicket">Average Ticket Price: $<%= '%.02f' % (total/count)%>  </span>
+  <span id="lowTicket">Cheapest Available Ticket: $<%= '%.02f' % (low)%></span>
   <table class="table1 table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
     <h4> <%= @game.date.to_date.strftime("%B %d, %Y") + " @ Kinnick Stadium" %> </h4>
     <thead>
