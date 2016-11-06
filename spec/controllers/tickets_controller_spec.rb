@@ -3,11 +3,14 @@ require 'rails_helper'
 
 describe TicketsController do
     describe 'Posting a ticket' do
+        
+        #let(:user) { FactoryGirl.build(:user) }
+        
         before{(@game=Game.new(id: 1, name: "Iowa State Cyclones", date: "10-Sep-2016"))
                 (@current_user=User.new(id: 1, first_name: "John", last_name: "Smith", email: "jsmith@gmail.com", password_digest: "password",
                     rating: 5))
-                #@ticket2=Ticket.new(game_id: @game.id, price: 40, ticket_type: "student")
-                #@current_user.tickets << @ticket2
+                @ticket=Ticket.new(game_id: @game.id, price: 40, ticket_type: "student")
+                @current_user.tickets << @ticket
         }
         
         it 'should show the tickets page' do
@@ -21,11 +24,12 @@ describe TicketsController do
         end
         
         it 'should flash a message saying successful ticket' do
-            #expect(Ticket).to receive(:new).with(game_id: @game.id, user_id: @current_user.id)
-            #expect(@current_user.tickets).to eq(@ticket)
+            #expect(Ticket).to receive(:new).with(game_id: @game.id.to_s, user_id: @current_user.id.to_s).and_return(@ticket)
+            #expect(@current_user.tickets[0]).to eq(@ticket)
+            #allow_any_instance_of(ApplicationController).to receive(:set_current_user).and_return(user)
             #expect(flash[:notice]).to match("Your ticket was successfully posted.")
             #expect(response).to redirect_to(game_tickets_path(@ticket.game_id))
-            #post :create, {:ticket => {game_id: @game.id, user_id: @current_user.id}}
+            post :create, {"ticket" => {game_id: @game.id.to_s, user_id: @current_user.id.to_s}}
         end
         
         it 'should flash a message and redirect if incorrect ticket' do

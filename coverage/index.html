@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-04T22:10:47+00:00">2016-11-04T22:10:47+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-06T21:48:24+00:00">2016-11-06T21:48:24+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.23
+         1.27
        </span>
     </span> hits/line)
   </h2>
@@ -87,7 +87,7 @@
         <td>18</td>
         <td>15</td>
         <td>3</td>
-        <td>0.9</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -193,7 +193,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.28
+         1.33
        </span>
     </span> hits/line)
   </h2>
@@ -255,7 +255,7 @@
         <td>18</td>
         <td>15</td>
         <td>3</td>
-        <td>0.9</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -940,8 +940,8 @@
           <code class="ruby">        @ticket = Ticket.new(ticket_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
           
           <code class="ruby">        if @ticket.save</code>
         </li>
@@ -955,7 +955,7 @@
         <li class="missed" data-hits="0" data-linenumber="17">
           
           
-          <code class="ruby">            flash[:notice] = &quot;Your #{Game.find_by_id(@ticket.game_id).name} ticket was successfully posted.&quot;</code>
+          <code class="ruby">            flash[:notice] = &quot;Your ticket was successfully posted.&quot; #&quot;Your #{Game.find_by_id(@ticket.game_id).name} ticket was successfully posted.&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="18">
@@ -970,14 +970,14 @@
           <code class="ruby">        else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
           <code class="ruby">            flash[:notice] = &quot;Invalid ticket submission.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="21">
+          <span class="hits">2</span>
           
           <code class="ruby">            redirect_to new_ticket_path</code>
         </li>
