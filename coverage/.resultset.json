@@ -17,6 +17,28 @@
         1,
         null
       ],
+      "/home/ubuntu/workspace/TicketExchange/app/controllers/games_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/TicketExchange/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        8,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/TicketExchange/app/controllers/sessions_controller.rb": [
         1,
         1,
@@ -38,23 +60,6 @@
         1,
         1,
         1,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/TicketExchange/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        8,
-        null,
-        null,
-        null,
-        1,
-        0,
         null,
         null
       ],
@@ -179,13 +184,8 @@
         0,
         null,
         null
-      ],
-      "/home/ubuntu/workspace/TicketExchange/app/controllers/games_controller.rb": [
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1478468904
+    "timestamp": 1478482901
   }
 }
