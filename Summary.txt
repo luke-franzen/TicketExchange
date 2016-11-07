@@ -1,0 +1,5 @@
+Iteration 1:
+    All goals for this iteration were met.  We ran into some issues with JavaScript
+    Libaries and testing.  The most difficult part for us was testing what we wrote.
+    To fix these issues, we will focus on testing earlier on and not neglect it.
+    We will also ask each other for help with testing if one is stuck.
