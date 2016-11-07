@@ -23,7 +23,8 @@ ActiveRecord::Schema.define(version: 20161026021603) do
   create_table "tickets", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "game_id"
-    t.integer    "price"
+    t.integer  "price"
+    t.boolean  "sold"
     t.string   "ticket_type"
     t.datetime "created_at"
     t.datetime "updated_at"
