@@ -33,10 +33,11 @@
     <% total += ticket.price %>
     <% count += 1 %>
   <% end %>
-  <span id="averageTicket">Average Ticket Price: $<%= '%.02f' % (total/count)%>  </span>
-  <span id="lowTicket">Cheapest Available Ticket: $<%= '%.02f' % (low)%></span>
+ 
   <table class="table1 table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
     <h4> <%= @game.date.to_date.strftime("%B %d, %Y") + " @ Kinnick Stadium" %> </h4>
+   <span id="averageTicket">Average Ticket Price: $<%= '%.02f' % (total/count)%>  </span>
+  <span id="lowTicket">Cheapest Available Ticket: $<%= '%.02f' % (low)%></span>
     <thead>
       <tr>
         <th style="text-align:center" class="sellerName" colspan="1">Seller Name</th>
