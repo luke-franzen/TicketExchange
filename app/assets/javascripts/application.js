@@ -19,4 +19,7 @@
 
 //= require jquery-tablesorter/jquery.tablesorter
 
+//= require highcharts
+//= require chartkick
+
 //= require_tree .
