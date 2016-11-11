@@ -54,7 +54,7 @@
           <td> <%= user.first_name + " " + user.last_name %> </td>
           <td> <%= ticket.ticket_type %> </td>
           <td> $<%= '%.02f' % ticket.price %> </td>
-          <td> <button type="button" id="buy_button">Buy Me</button></td>
+          <td><%= link_to '<button type="button" id="buy_button">Buy Me</button>'.html_safe, conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: 'post'%></td>
         </tr>
       <% end %>
     </tbody>

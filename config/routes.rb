@@ -20,6 +20,10 @@ Rails.application.routes.draw do
   match '/login', to: 'sessions#new', via: :get
   match '/logout', to: 'sessions#destroy', via: :delete
 
+
+  resources :conversations do
+    resources :messages
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

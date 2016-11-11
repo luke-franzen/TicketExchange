@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
     has_many :tickets
     has_many :games, :through => :tickets
+    has_many :conversations, :foreign_key => :sender_id
+    
 
     has_secure_password
     before_save {|user| user.email=user.email.downcase}
