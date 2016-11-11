@@ -37,6 +37,8 @@ gem 'rails-jquery-autocomplete'
 
 gem 'jquery-tablesorter'
 
+gem 'chartkick'
+
 
 
 group :development, :test do
