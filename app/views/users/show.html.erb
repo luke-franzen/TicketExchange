@@ -2,8 +2,8 @@
   <h1><%= @user.first_name + " " + @user.last_name%></h1>
   
   <div class="tickets" id = "user_ticket_box">
-  <% if @user.tickets.select{|t|!t.sold}.count > 0 %>
-      <h2><%= "Selling " + pluralize(@user.tickets.select{|t|!t.sold}.count, "Ticket") %></h2>
+  <% if @tickets.count > 0 %>
+      <h2><%= "Selling " + pluralize(@tickets.count, "Ticket") %></h2>
       <table class="table1 table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
         <thead>
           <tr>
@@ -15,7 +15,7 @@
         </thead>
         
         <tbody>
-          <% @user.tickets.select{|t|!t.sold}.each do |ticket| %>
+          <% @tickets.each do |ticket| %>
             <% user = User.find_by_id(ticket.user_id) %>
             <tr>
               <td> <%= ticket.game.name %></td>
@@ -40,8 +40,8 @@
     <br><br>
     
     <% if @user == @current_user %>
-        <% if @user.tickets.select{|t|t.sold}.count > 0 %>
-            <h2><%= "Sold " + pluralize(@user.tickets.select{|t|t.sold}.count, "Ticket") %></h2>
+        <% if @sold.count > 0 %>
+            <h2><%= "Sold " + pluralize(@sold.count, "Ticket") %></h2>
             <table class="table1 table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
                 <thead>
                   <tr>
@@ -52,7 +52,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <% @user.tickets.select{|t|t.sold}.each do |ticket| %>
+                  <% @sold.each do |ticket| %>
                     <% user = User.find_by_id(ticket.user_id) %>
                     <tr>
                       <td> <%= ticket.game.name %></td>

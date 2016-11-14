@@ -18,6 +18,10 @@ class UsersController < ApplicationController
     def show
         id = params[:id] # retrieve movie ID from URI route
         @user = User.find(id) # look up movie by unique ID
+        @tickets = @user.tickets.select{|t|!t.sold}
+        if @user == @current_user
+            @sold = @user.tickets.select{|t|t.sold}
+        end
     end
 
     private
