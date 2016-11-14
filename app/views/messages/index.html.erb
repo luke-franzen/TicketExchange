@@ -1,25 +1,51 @@
+<h1>Message: <%= @message_title %></h1>
+<h4>Here is where you come up with a meeting place, time, and payment method.</h4>
+<div class="form-box">
+  <div class="form-top">
+    <div class="col-sm-offset-3">
+    <div class="col-xs-6 text-left">
+      <%= button_to "Close", conversations_path, :method => :get, :class => 'btn btn-primary', :type => 'submit'%>
+    </div>
 <% if @over_ten %>
- <%= link_to 'Show Previous', '?m=all' %>
+  <div class="col-xs-6">
+     <%= link_to 'Previous Messages', '?m=all', :class => "btn"%>
+  </div>
 <% end %>
+</div>
 <div>
  <% @messages.each do |message| %>
   <% if message.body %>
    <% user = User.find(message.user_id) %>
    <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-offset-3">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
      <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">
+          <% if message.user_id == @current_user.id %>
           <div class="col-xs-6">
             <h5 class="text-left"><strong><%= user.first_name %></strong></h5>
           </div>
           <div class="col-xs-6">
-            <div class="text-muted">
+            <div class="text-muted text-right">
               <%= message.message_time %>
             </div>
           </div>
+          <% else %>
+          <div class="col-xs-6">
+            <div class="text-muted text-left">
+              <%= message.message_time %>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <h5 class="text-right"><strong><%= user.first_name %></strong></h5>
+          </div>
+          <%end%>
         </div>
+       <% if message.user_id == @current_user.id %>
       <p class="text-left"><%= message.body %></p>
+      <% else %>
+      <p class="text-right"><%= message.body %></p>
+      <%end%>
     </div>
   </div>
   </div>
@@ -28,12 +54,18 @@
  <% end %>
 <% end %>
 </div>
+
 <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
- <div class="col-xs-12 col-sm-6 col-md-offset-3">
-   <%= f.text_area :body, class: "form-control", rows:5 %>
- </div>
  <%= f.text_field :user_id, value: @current_user.id, type: "hidden" %> 
- <div>
-   <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
- </div>
+     <div class="input-group input-group-lg form-inline col-xs-12 col-sm-6 col-md-offset-3">
+     <%= f.text_area :body, class: "form-control", :placeholder => "Enter Message", id: "message_text_area" %>
+              <span class="input-group-btn">
+          <%= button_tag("Send", :type => 'submit', :class => 'btn') do%>  
+               <i class="glyphicon glyphicon-send"></i>
+          <% end %>
+          </span>
+    </div>
 <% end %>
+</div>
+<div class="form-bottom"></div>
+</div>
