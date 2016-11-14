@@ -3,7 +3,6 @@
   <h2> vs. </h2>
   <h1> Iowa Hawkeyes </h1>
   <script id="js">$(function() {
-
 	// initial sort set using sortList option
 	$(".table1").tablesorter({
 		theme : 'default',
@@ -43,7 +42,9 @@
         <th style="text-align:center" class="sellerName" colspan="1">Seller Name</th>
         <th style="text-align:center" class="ticketType" colspan="1">Ticket Type</th>
         <th style="text-align:center" colspan="1">Price</th>
-        <th style="text-align:center" class="actionsHeader" colspan="1">Actions</th>
+        <% if @current_user != nil %>
+            <th style="text-align:center" class="actionsHeader" colspan="1">Actions</th>
+        <% end %>
       </tr>
     </thead>
     
@@ -54,7 +55,9 @@
           <td> <%= user.first_name + " " + user.last_name %> </td>
           <td> <%= ticket.ticket_type %> </td>
           <td> $<%= '%.02f' % ticket.price %> </td>
-          <td><%= link_to '<button type="button" id="buy_button">Buy Me</button>'.html_safe, conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: 'post'%></td>
+          <% if @current_user != nil %>
+              <td><%= link_to '<button type="button" id="buy_button">Buy Me</button>'.html_safe, conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: 'post'%></td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
