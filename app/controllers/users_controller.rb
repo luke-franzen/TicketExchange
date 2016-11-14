@@ -15,6 +15,11 @@ class UsersController < ApplicationController
         end
     end
 
+    def show
+        id = params[:id] # retrieve movie ID from URI route
+        @user = User.find(id) # look up movie by unique ID
+    end
+
     private
         def user_params
             params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
