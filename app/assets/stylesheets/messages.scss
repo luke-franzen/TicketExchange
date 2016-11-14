@@ -9,3 +9,8 @@
 .right{
     float: right;
 }
+
+#message_text_area{
+    resize:vertical;
+    overflow:auto;
+}
