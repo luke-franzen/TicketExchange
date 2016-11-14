@@ -3,12 +3,26 @@ class TicketsController < ApplicationController
     
     def index
         @game = Game.find_by_id(params[:game_id])
-        @tickets = @game.tickets
+        @tickets = @game.tickets.select{|t|!t.sold}
         #@sold = @game.sold
     end
     
     def new
         @ticket = Ticket.new
+    end
+    
+    def edit
+        @ticket = Ticket.find_by_id(params[:id])
+        @ticket.sold = true;
+        @ticket.save!
+        redirect_to user_path(@current_user)
+    end
+    
+    def destroy
+        @ticket = Ticket.find(params[:id])
+        @ticket.destroy
+        flash[:notice] = "Ticket for '#{@ticket.game.name}' deleted."
+        redirect_to user_path(@current_user) 
     end
     
     def create

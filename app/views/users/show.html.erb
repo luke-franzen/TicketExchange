@@ -1,0 +1,72 @@
+<div>
+  <h1><%= @user.first_name + " " + @user.last_name%></h1>
+  
+  <div class="tickets" id = "user_ticket_box">
+  <% if @tickets.count > 0 %>
+      <h2><%= "Selling " + pluralize(@tickets.count, "Ticket") %></h2>
+      <table class="table1 table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
+        <thead>
+          <tr>
+            <th style="text-align:center" class="ticketGame" colspan="1">Game</th>
+            <th style="text-align:center" class="ticketType" colspan="1">Ticket Type</th>
+            <th style="text-align:center" colspan="1">Price</th>
+            <th style="text-align:center" class="actionsHeader" colspan="1">Actions</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <% @tickets.each do |ticket| %>
+            <% user = User.find_by_id(ticket.user_id) %>
+            <tr>
+              <td> <%= ticket.game.name %></td>
+              <td> <%= ticket.ticket_type %> </td>
+              <td> $<%= '%.02f' % ticket.price %> </td>
+              <% if @user != @current_user %>
+                <td><%= link_to '<button type="button" id="buy_button">Buy Me</button>'.html_safe, conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: 'post'%></td>
+              <% else %>
+                <td>
+                    <%= link_to '<button type="button" id="mark_sold_button">Mark Sold</button>'.html_safe, edit_ticket_path(ticket)%>
+                    <%= link_to '<button type="button" id="delete_button">Delete</button>'.html_safe, ticket_path(ticket), method: 'delete'%>
+                </td>
+               <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+        <h2><%="No Tickets for Sale" %></h2>
+    <% end %>
+    
+    <br><br>
+    
+    <% if @user == @current_user %>
+        <% if @sold.count > 0 %>
+            <h2><%= "Sold " + pluralize(@sold.count, "Ticket") %></h2>
+            <table class="table1 table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
+                <thead>
+                  <tr>
+                    <th style="text-align:center" class="ticketGame" colspan="1">Game</th>
+                    <th style="text-align:center" class="ticketType" colspan="1">Ticket Type</th>
+                    <th style="text-align:center" colspan="1">Price</th>
+                    <th style="text-align:center" class="actionsHeader" colspan="1">Sold At</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @sold.each do |ticket| %>
+                    <% user = User.find_by_id(ticket.user_id) %>
+                    <tr>
+                      <td> <%= ticket.game.name %></td>
+                      <td> <%= ticket.ticket_type %> </td>
+                      <td> $<%= '%.02f' % ticket.price %> </td>
+                      <td> <%= ticket.updated_at %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+            </table>
+        <% else %>
+            <h2><%= "No tickets sold" %></h2>
+        <% end %>
+    <% end %>
+    
+</div>
+</div>

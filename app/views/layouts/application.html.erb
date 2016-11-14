@@ -31,6 +31,7 @@
           <% if @current_user %>
             <li><%= link_to "Logout", logout_path, :method => 'delete', :id => "logout-link"%></li>
             <li><%= link_to "Messages", conversations_path, :id => "message_link"%></li>
+            <li><%= link_to "My Profile", user_path(@current_user), :id=>"profile-link"%></li>
             <li><%= link_to "Sell your Ticket", new_ticket_url, :id => "sell-ticket-btn"%></li>
           <% else %>
             <li><%= link_to "Sign Up/Login", new_user_url, :id => "login-link"%></li>
