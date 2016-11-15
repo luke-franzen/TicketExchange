@@ -14,7 +14,7 @@
         <% recipient = User.find(conversation.sender_id) %>
        <% end %>
       <tr>
-       <td><%= link_to recipient.first_name,   conversation_messages_path(conversation)%></td>
+       <td><%= link_to recipient.first_name + " " + recipient.last_name,   conversation_messages_path(conversation)%></td>
       </tr>
      <% end %>
     <% end %>

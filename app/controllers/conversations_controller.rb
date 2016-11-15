@@ -1,11 +1,10 @@
 #Source: https://medium.com/@danamulder/tutorial-create-a-simple-messaging-system-on-rails-d9b94b0fbca1#.tofdcugrq
 
 class ConversationsController < ApplicationController
- #before_action :authenticate_user
+ 
  before_filter :set_current_user
 
 def index
- @users = User.all
  @conversations = Conversation.all
 end
 
