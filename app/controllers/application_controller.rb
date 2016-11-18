@@ -13,4 +13,5 @@ class ApplicationController < ActionController::Base
     @current_user.id.to_s == id
   end
   
+  helper_method :current_user?
 end

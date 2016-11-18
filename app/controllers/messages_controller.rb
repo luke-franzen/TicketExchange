@@ -14,11 +14,16 @@ def index
    @messages = @conversation.messages
   end
   if @messages.last
-   if @messages.last.user_id != @current_user.id
+   if last_user_id != @current_user.id
     @messages.last.read = true;
    end
   end
   @message = @conversation.messages.new
+end
+
+def last_user_id
+ last_mess = @messages.last
+ last_mess.user_id
 end
 
 def setTitle
@@ -36,9 +41,9 @@ def setOver5
   end
 end
 
-def new
-  @message = @conversation.messages.new
-end
+# def new
+#   @message = @conversation.messages.new
+# end
 
 def create
  if(message_params[:body].nil? || message_params[:body].blank? || message_params[:body].empty? )
@@ -46,9 +51,9 @@ def create
   redirect_to conversation_messages_path(@conversation)
  else
  @message = @conversation.messages.new(message_params)
-  if @message.save
-   redirect_to conversation_messages_path(@conversation)
-  end
+ @message.save
+ redirect_to conversation_messages_path(@conversation)
+  
  end
 end
 
