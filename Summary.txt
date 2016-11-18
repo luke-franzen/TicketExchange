@@ -3,3 +3,11 @@ Iteration 1:
     Libaries and testing.  The most difficult part for us was testing what we wrote.
     To fix these issues, we will focus on testing earlier on and not neglect it.
     We will also ask each other for help with testing if one is stuck.
+    
+    
+Iteration 2:
+    Most of the goals for this iteration were met.  We ran into issues with taking on too much workd.
+    However, the baseline was met and it is fully functional. Once again, we ran into issues with testing.
+    We will once again, focus on testing earlier.
+    
+    
