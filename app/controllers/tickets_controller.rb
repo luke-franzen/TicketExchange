@@ -21,7 +21,7 @@ class TicketsController < ApplicationController
     def destroy
         @ticket = Ticket.find(params[:id])
         @ticket.destroy
-        flash[:notice] = "Ticket for '#{@ticket.game.name}' deleted."
+        flash[:notice] = "Ticket successfully deleted."
         redirect_to user_path(@current_user) 
     end
     
