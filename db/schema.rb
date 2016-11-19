@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109203555) do
+ActiveRecord::Schema.define(version: 20161109223328) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 20161109203555) do
     t.integer  "user_id"
     t.integer  "game_id"
     t.integer  "price"
-    t.boolean  "sold"
     t.string   "ticket_type"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -61,6 +60,9 @@ ActiveRecord::Schema.define(version: 20161109203555) do
     t.string   "session_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "activation_digest"
+    t.boolean  "activated"
+    t.datetime "activated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

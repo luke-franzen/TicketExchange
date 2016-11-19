@@ -1,0 +1,7 @@
+<%= form_tag password_resets_path, :method => 'post' do %>
+	<div class="form-group">
+		<%= label :session, :email, :class => 'sr-only' %>
+		<%= text_field :session, :email, :placeholder => 'Email', class: 'form-control' %>
+	</div>
+    <%= button_tag("Log in", :type => 'submit', :class => 'btn', :id => 'log-in-button') %>
+<% end %>
