@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109203555) do
+ActiveRecord::Schema.define(version: 20161120025747) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -43,10 +43,10 @@ ActiveRecord::Schema.define(version: 20161109203555) do
     t.integer  "user_id"
     t.integer  "game_id"
     t.integer  "price"
-    t.boolean  "sold"
     t.string   "ticket_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "sold"
   end
 
   add_index "tickets", ["game_id"], name: "index_tickets_on_game_id"
