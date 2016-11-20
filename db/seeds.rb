@@ -20,10 +20,10 @@ games.each do |game|
 end
 
 #TODO: determine way to hash these passwords
-users = [{:first_name => "jack", :last_name => "sparrow", :email => "jack_sparrow@gmail.com", :password => "password1", :password_confirmation => "password1", :session_token => SecureRandom.urlsafe_base64},
-         {:first_name => "pizza", :last_name => "hut", :email => "pizza@gmail.com", :password => "password2", :password_confirmation => "password2", :session_token => SecureRandom.urlsafe_base64},
-         {:first_name => "tony", :last_name => "stark", :email => "tonystark@gmail.com", :password => "password3", :password_confirmation => "password3", :session_token => SecureRandom.urlsafe_base64},
-         {:first_name => "peter", :last_name => "parker", :email => "peter_parker@gmail.com", :password => "password4", :password_confirmation => "password4", :session_token => SecureRandom.urlsafe_base64}]
+users = [{:first_name => "jack", :last_name => "sparrow", :email => "jack_sparrow@gmail.com", :password => "password1", :password_confirmation => "password1", :session_token => SecureRandom.urlsafe_base64, :activated => true, :activated_at => Time.zone.now},
+         {:first_name => "pizza", :last_name => "hut", :email => "pizza@gmail.com", :password => "password2", :password_confirmation => "password2", :session_token => SecureRandom.urlsafe_base64, :activated => true, :activated_at => Time.zone.now},
+         {:first_name => "tony", :last_name => "stark", :email => "tonystark@gmail.com", :password => "password3", :password_confirmation => "password3", :session_token => SecureRandom.urlsafe_base64, :activated => true, :activated_at => Time.zone.now},
+         {:first_name => "peter", :last_name => "parker", :email => "peter_parker@gmail.com", :password => "password4", :password_confirmation => "password4", :session_token => SecureRandom.urlsafe_base64, :activated => true, :activated_at => Time.zone.now}]
 
 users.each do |user|
     User.create(user)

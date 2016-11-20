@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   get 'sessions/new'
 
   get 'welcome/index'
@@ -11,6 +15,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :account_activations, only: [:edit]
 
   resources :tickets
   resources :games do

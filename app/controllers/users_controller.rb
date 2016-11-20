@@ -8,19 +8,11 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            flash[:notice] = "Sign up successful."
+            @user.send_activation_email
+            flash[:notice] = "Sign up successful. A verification email has been sent."
             redirect_to welcome_index_path
         else
             render 'new'
-        end
-    end
-
-    def show
-        id = params[:id] # retrieve movie ID from URI route
-        @user = User.find(id) # look up movie by unique ID
-        @tickets = @user.tickets.select{|t|!t.sold}
-        if @user == @current_user
-            @sold = @user.tickets.select{|t|t.sold}
         end
     end
 
