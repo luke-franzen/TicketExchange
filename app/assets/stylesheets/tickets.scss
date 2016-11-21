@@ -35,17 +35,23 @@
     font-family: 'Roboto', sans-serif;
 }
 
-#averageTicket{
+#sold_tickets{
     font-weight: 500;
     font-size: 18px;
     display: block;
     padding-top: 10px;
 }
 
-#lowTicket{
+#for_sale{
     font-weight: 500;
     font-size: 18px;
     display: block;
+    padding-bottom: 10px;
+}
+
+#chart{
+    margin: auto;
+    width: 85% !important;
     padding-bottom: 10px;
 }
 

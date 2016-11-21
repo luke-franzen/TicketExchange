@@ -2,6 +2,7 @@
   <h1> <%= @game.name %> </h1>
   <h2> vs. </h2>
   <h1> Iowa Hawkeyes </h1>
+  <h4> <%= @game.date.to_date.strftime("%B %d, %Y") + " @ Kinnick Stadium" %> </h4>
   <script id="js">$(function() {
 	// initial sort set using sortList option
 	$(".table1").tablesorter({
@@ -21,22 +22,17 @@
   });
   </script>
   
-  
-  <% total = 0.0 %>
-  <% count = 0 %>
-  <% low = 999999999999 %> <!-- how do i set this to float MAX?? -->
-  <% @tickets.each do |ticket| %>
-    <% if ticket.price<low %>
-      <% low=ticket.price %>
-    <% end %>
-    <% total += ticket.price %>
-    <% count += 1 %>
+  <span id="sold_tickets">Sold Tickets</span>
+  <% sold = Hash.new(0) %>
+  <% @soldTickets.each do |ticket| %>
+    <% sold[ticket.updated_at]=ticket.price %>
   <% end %>
+  <div id="chart"><%= line_chart(sold) %></div>
+
+  
  
   <table class="table1 table-nonfluid table-condensed table-striped table-bordered table-hover text-centered" id="ticket_table">
-    <h4> <%= @game.date.to_date.strftime("%B %d, %Y") + " @ Kinnick Stadium" %> </h4>
-   <span id="averageTicket">Average Ticket Price: $<%= '%.02f' % (total/count)%>  </span>
-  <span id="lowTicket">Cheapest Available Ticket: $<%= '%.02f' % (low)%></span>
+    <span id="for_sale">For Sale</span>
     <thead>
       <tr>
         <th style="text-align:center" class="sellerName" colspan="1">Seller Name</th>
