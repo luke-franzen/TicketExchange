@@ -4,7 +4,7 @@ end
 
 Given /^a user exists with the following attributes:$/ do |attribute_table|
   attribute_table.hashes.each do |attribute|
-     user = User.new(:first_name => attribute[:first_name], :last_name => attribute[:last_name], :email => attribute[:email], :password => attribute[:password], :password_confirmation => attribute[:password_confirmation])
+     user = User.new(:first_name => attribute[:first_name], :last_name => attribute[:last_name], :email => attribute[:email], :password => attribute[:password], :password_confirmation => attribute[:password_confirmation], :activated => attribute[:activated])
      user.save
   end
 end
