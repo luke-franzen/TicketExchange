@@ -20,6 +20,7 @@ RSpec.describe TicketsController, type: :controller do
         
         it 'should query the games database and return a game object when a game is selected for a ticket' do
             expect(@game).to receive(:tickets).and_return(Ticket.all)
+            expect(@game).to receive(:tickets).and_return(Ticket.all)
             get :index, {:game_id => "1"}
         end
         
