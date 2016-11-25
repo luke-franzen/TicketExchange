@@ -27,7 +27,7 @@
 								<div class="form-group">
 		                    		<%= label :session, :password, :class => 'sr-only' %>
 		                    		<%= password_field :session, :password, :placeholder => 'Password', class: 'form-control' %>
-		                    		<%= link_to "forgot password", new_password_reset_path %>
+		                    		<%= link_to "forgot password", new_password_reset_path, :id => 'forgot-password-link' %>
 								</div>
 		                        <%= button_tag("Log in", :type => 'submit', :class => 'btn', :id => 'log-in-button') %>
 		                    <% end %>
