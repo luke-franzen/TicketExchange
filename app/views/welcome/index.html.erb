@@ -27,9 +27,15 @@
     </div>
     <div class="container " id="quickTickets">
         <% Game.all.each do |game| %>
-            <h2>
-                <%= link_to game.name, game_tickets_path(game.id), :id => "gameid_"+game.id.to_s%>
+            <h2> <%= link_to game.name, game_tickets_path(game.id), :id => "gameid_"+game.id.to_s%>
+                <% if currentuser_is_admin? %>
+                    <small>
+                        <%= button_tag(type:'submit') do %>
+                        <%= link_to "Delete", game_path(game.id), method: 'delete'%>
+                    </small>
+                <% end %>
             </h2>
+            <% end %>
         <%end%>
     </div>
 </div>
