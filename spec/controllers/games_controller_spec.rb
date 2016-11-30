@@ -22,5 +22,8 @@ RSpec.describe GamesController, type: :controller do
             expect(flash[:notice]).to eq "Iowa State Cyclones successfully deleted."
             expect(response).to redirect_to(welcome_index_path)
         end
+        
+        it 'successfully add a game' do
+        end
     end
 end

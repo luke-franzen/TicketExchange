@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-30T01:26:46+00:00">2016-11-30T01:26:46+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-30T02:34:30+00:00">2016-11-30T02:34:30+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.28%</span></span>
+    (<span class="covered_percent"><span class="green">96.88%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.48
+         1.44
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>25</b> files in total.
-    <b>278</b> relevant lines. 
-    <span class="green"><b>276</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <b>288</b> relevant lines. 
+    <span class="green"><b>279</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -67,7 +67,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>2.5</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#e653120ee7b0510351cbe6ce70b81fcb0464c204" class="src_link" title="app/controllers/games_controller.rb">app/controllers/games_controller.rb</a></td>
-        <td class="yellow strong">83.33 %</td>
-        <td>18</td>
-        <td>12</td>
-        <td>10</td>
-        <td>2</td>
-        <td>0.8</td>
+        <td class="red strong">59.09 %</td>
+        <td>35</td>
+        <td>22</td>
+        <td>13</td>
+        <td>9</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -309,20 +309,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="green">98.99%</span></span>
+    (<span class="covered_percent"><span class="green">95.67%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.47
+         1.42
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>10</b> files in total.
-    <b>198</b> relevant lines. 
-    <span class="green"><b>196</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <b>208</b> relevant lines. 
+    <span class="green"><b>199</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -355,7 +355,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>2.5</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -370,12 +370,12 @@
       
       <tr>
         <td class="strong"><a href="#e653120ee7b0510351cbe6ce70b81fcb0464c204" class="src_link" title="app/controllers/games_controller.rb">app/controllers/games_controller.rb</a></td>
-        <td class="yellow strong">83.33 %</td>
-        <td>18</td>
-        <td>12</td>
-        <td>10</td>
-        <td>2</td>
-        <td>0.8</td>
+        <td class="red strong">59.09 %</td>
+        <td>35</td>
+        <td>22</td>
+        <td>13</td>
+        <td>9</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -940,8 +940,8 @@
           <code class="ruby">  def set_current_user</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="8">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="20" data-linenumber="8">
+          <span class="hits">20</span>
           
           <code class="ruby">    @current_user ||= User.find_by_session_token(cookies[:session_token])</code>
         </li>
@@ -1217,11 +1217,11 @@
         <div class="source_table" id="e653120ee7b0510351cbe6ce70b81fcb0464c204">
   <div class="header">
     <h3>app/controllers/games_controller.rb</h3>
-    <h4><span class="yellow">83.33 %</span> covered</h4>
+    <h4><span class="red">59.09 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>22</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
+      <span class="red"><b>9</b> lines missed.</span>
     </div>
   </div>
   
@@ -1237,100 +1237,202 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
+          <code class="ruby">    before_filter :set_current_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
           <code class="ruby">    autocomplete :game, :name, :full =&gt; true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">    </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    def destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">        game = Game.find_by_id(params[:id])</code>
+          <code class="ruby">    def destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">        game = Game.find_by_id(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
           <code class="ruby">        game.tickets.each do |ticket|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="missed" data-hits="0" data-linenumber="8">
           
           
           <code class="ruby">            ticket.delete</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">        end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        game.destroy    </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">        flash[:notice] = game.name+&quot; successfully deleted.&quot;</code>
+          <code class="ruby">        game.destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">        redirect_to welcome_index_path</code>
+          <code class="ruby">        flash[:notice] = game.name+&quot; successfully deleted.&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">        redirect_to welcome_index_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="14">
           
-          <code class="ruby">    private</code>
+          
+          <code class="ruby">    </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">        def game_params</code>
+          <code class="ruby">    def new</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">        params.require(:id)</code>
+          <code class="ruby">        @game = Game.new</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def create</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">        @game = Game.new(game_params)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">        if @game.save</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
+          
+          <code class="ruby">            flash[:notice] = @game.name+&quot; successfully added.&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">            redirect_to welcome_index_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">            flash[:notice] = &quot;Invalid input parameters.&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
+          
+          <code class="ruby">            redirect_to new_game_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">        </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        def game_params</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
+          
+          <code class="ruby">            params.require(:game).permit(:name,:date)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">end</code>
