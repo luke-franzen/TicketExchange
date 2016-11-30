@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
   
   def currentuser_is_admin?
-    @admins = ["luke.franzen@gmail.com"]
+    @admins = ["luke.franzen@gmail.com", "test@gmail.com"]
     if @current_user
       @admins.include?(@current_user.email)
     end
