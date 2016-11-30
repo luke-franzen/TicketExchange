@@ -4,10 +4,7 @@ class GamesController < ApplicationController
     
     def destroy
         game = Game.find_by_id(params[:id])
-        game.tickets.each do |ticket|
-            ticket.delete
-        end
-        game.destroy
+        Game.destroy(game.id)
         flash[:notice] = game.name+" successfully deleted."
         redirect_to welcome_index_path
     end

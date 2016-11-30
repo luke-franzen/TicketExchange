@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-    has_many :tickets
+    has_many :tickets, :dependent => :destroy
     has_many :games, :through => :tickets
     has_many :conversations, :foreign_key => :sender_id
 

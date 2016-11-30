@@ -19,10 +19,7 @@ RSpec.describe GamesController, type: :controller do
         
         it 'successfully delete a game' do
             expect(Game).to receive(:find_by_id).with("1").and_return(@game)
-            expect(@game).to receive(:tickets).and_return(Ticket.all)
-            allow(Ticket.all).to receive(:each).and_return(@ticket)
-            allow(Ticket.all).to receive(:delete)
-            expect(@game).to receive(:destroy)
+            expect(Game).to receive(:destroy).with(@game.id)
             delete :destroy, {:id => "1"}
             expect(flash[:notice]).to eq "Iowa State Cyclones successfully deleted."
             expect(response).to redirect_to(welcome_index_path)
