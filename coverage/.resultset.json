@@ -66,6 +66,13 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
         null
       ],
       "/home/ubuntu/workspace/TicketExchange/app/controllers/conversations_controller.rb": [
@@ -98,6 +105,21 @@
       "/home/ubuntu/workspace/TicketExchange/app/controllers/games_controller.rb": [
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
         null
       ],
       "/home/ubuntu/workspace/TicketExchange/app/controllers/messages_controller.rb": [
@@ -506,6 +528,6 @@
         null
       ]
     },
-    "timestamp": 1480354619
+    "timestamp": 1480469206
   }
 }

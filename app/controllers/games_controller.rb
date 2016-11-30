@@ -6,7 +6,7 @@ class GamesController < ApplicationController
         game.tickets.each do |ticket|
             ticket.delete
         end
-        game.destroy
+        game.destroy    
         flash[:notice] = game.name+" successfully deleted."
         redirect_to welcome_index_path
     end

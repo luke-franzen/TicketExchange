@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-28T17:36:59+00:00">2016-11-28T17:36:59+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-11-30T01:26:46+00:00">2016-11-30T01:26:46+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">99.28%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.51
+         1.48
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>25</b> files in total.
-    <b>264</b> relevant lines. 
-    <span class="green"><b>264</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>278</b> relevant lines. 
+    <span class="green"><b>276</b> lines covered</span> and
+    <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#40c475c9f6697f99a6545cdd1207e4311434c530" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
-        <td>8</td>
-        <td>8</td>
+        <td>24</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
-        <td>3.3</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#e653120ee7b0510351cbe6ce70b81fcb0464c204" class="src_link" title="app/controllers/games_controller.rb">app/controllers/games_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>3</td>
+        <td class="yellow strong">83.33 %</td>
+        <td>18</td>
+        <td>12</td>
+        <td>10</td>
         <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -309,20 +309,20 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">98.99%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.52
+         1.47
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>10</b> files in total.
-    <b>184</b> relevant lines. 
-    <span class="green"><b>184</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>198</b> relevant lines. 
+    <span class="green"><b>196</b> lines covered</span> and
+    <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -351,11 +351,11 @@
       <tr>
         <td class="strong"><a href="#40c475c9f6697f99a6545cdd1207e4311434c530" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
-        <td>8</td>
-        <td>8</td>
+        <td>24</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
-        <td>3.3</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -370,12 +370,12 @@
       
       <tr>
         <td class="strong"><a href="#e653120ee7b0510351cbe6ce70b81fcb0464c204" class="src_link" title="app/controllers/games_controller.rb">app/controllers/games_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>3</td>
+        <td class="yellow strong">83.33 %</td>
+        <td>18</td>
+        <td>12</td>
+        <td>10</td>
         <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -889,8 +889,8 @@
     <h3>app/controllers/application_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -991,10 +991,52 @@
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  helper_method :current_user?</code>
+          <code class="ruby">  def currentuser_is_admin?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @admins = [&quot;luke.franzen@gmail.com&quot;]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    if @current_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @admins.include?(@current_user.email)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  helper_method :current_user?, :currentuser_is_admin?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
@@ -1175,11 +1217,11 @@
         <div class="source_table" id="e653120ee7b0510351cbe6ce70b81fcb0464c204">
   <div class="header">
     <h3>app/controllers/games_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">83.33 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>12</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -1199,6 +1241,96 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        game = Game.find_by_id(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        game.tickets.each do |ticket|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
+          
+          <code class="ruby">            ticket.delete</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        game.destroy    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        flash[:notice] = game.name+&quot; successfully deleted.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        redirect_to welcome_index_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        def game_params</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">        params.require(:id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">end</code>
