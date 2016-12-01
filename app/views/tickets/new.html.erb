@@ -3,6 +3,8 @@
 
     <div class="inner-bg">
         <div class="container">
+
+
             <div class="row">
                 <div class="col-sm-5">
 
@@ -22,20 +24,6 @@
 									<%= f.label(:ticket_type, "Ticket Type") %><br>
 		                    		<%= f.select(:ticket_type, options_for_select(Ticket.all_types)) %>
 								</div>
-								<div class="section-details" style="display:none">
-									<div class="form-group" style="display:inline-block">
-										<%= f.label(:section, "Section") %><br>
-			                    		<%= f.text_field :section, :size => 1, :maxlength => 40 %>
-									</div>
-									<div class="form-group" style="display:inline-block">
-										<%= f.label(:row, "Row") %><br>
-			                    		<%= f.text_field :row, :size => 1, :maxlength => 20 %>
-									</div>
-									<div class="form-group" style="display:inline-block">
-										<%= f.label(:seat, "Seat") %><br>
-			                    		<%= f.text_field(:seat, :size => 1, :maxlength => 10) %>
-									</div>
-								</div>
 								<div class="form-group">
 									<%= f.label(:price, "Price") %><br>
 		                    		<%= f.number_field(:price, :min => 0.00, :max => 1000.00, :step => 1) %>
@@ -50,15 +38,3 @@
     </div>
 </div>
 </div>
-
-<script>
-	$(document).ready(function(){
-	    $("#ticket_ticket_type").change(function(){
-	    	if($("#ticket_ticket_type").val() != "Student"){
-	          $(".section-details").fadeIn('slow');   
-	        } else {
-	          $(".section-details").fadeOut('fast');
-	        }            
-	    });        
-	});
-</script>
