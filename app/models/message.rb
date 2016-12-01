@@ -17,9 +17,9 @@ class Message < ActiveRecord::Base
     sender_id = self.user_id
     
     if(conversation.sender_id == sender_id)
-        # email_user =  User.find(conversation.recipient_id)
+        email_user =  User.find(conversation.recipient_id)
     else
-        # email_user = User.find(conversation_id.sender_id)
+        email_user = User.find(conversation_id.sender_id)
     end
     #MessageMailer.new_message(email_user).deliver_now
     
