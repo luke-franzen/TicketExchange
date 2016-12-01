@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(version: 20161201171725) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "sold"
+    t.string   "section"
+    t.string   "row"
+    t.integer  "seat"
   end
 
   add_index "tickets", ["game_id"], name: "index_tickets_on_game_id"

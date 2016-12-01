@@ -192,6 +192,7 @@
         1,
         1,
         1,
+        0,
         null,
         null,
         null,
@@ -337,6 +338,7 @@
         1,
         2,
         null,
+        null,
         null
       ],
       "/home/ubuntu/workspace/TicketExchange/app/controllers/users_controller.rb": [
@@ -358,6 +360,10 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -457,6 +463,24 @@
         1,
         1,
         null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
         null
       ],
       "/home/ubuntu/workspace/TicketExchange/app/models/ticket.rb": [
@@ -465,6 +489,7 @@
         1,
         null,
         1,
+        null,
         null,
         1,
         1,
@@ -540,8 +565,16 @@
         1,
         1,
         null
+      ],
+      "/home/ubuntu/workspace/TicketExchange/app/mailers/message_mailer.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1480535868
+    "timestamp": 1480614552
   }
 }
