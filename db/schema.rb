@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120025747) do
+ActiveRecord::Schema.define(version: 20161201171725) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -44,9 +44,6 @@ ActiveRecord::Schema.define(version: 20161120025747) do
     t.integer  "game_id"
     t.integer  "price"
     t.string   "ticket_type"
-    t.string   "section"
-    t.string   "row"
-    t.integer  "seat"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "sold"
