@@ -54,6 +54,11 @@
    
  <% end %>
 <% end %>
+<% if @messages.last.read && @messages.last.user_id == @current_user.id%>
+<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+  <p class="text-right text-muted">read</p>
+</div>
+<%end%>
 </div>
 
 <%= form_for [@conversation, @message], html: {} do |f| %>

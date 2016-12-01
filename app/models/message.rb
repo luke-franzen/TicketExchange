@@ -22,7 +22,6 @@ class Message < ActiveRecord::Base
         email_user = User.find(conversation.sender_id)
     end
     MessageMailer.new_message(email_user).deliver_now
-    
  end
     
 end

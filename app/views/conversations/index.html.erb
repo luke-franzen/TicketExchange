@@ -14,7 +14,11 @@
         <% recipient = User.find(conversation.sender_id) %>
        <% end %>
       <tr>
-       <td><%= link_to recipient.first_name + " " + recipient.last_name,   conversation_messages_path(conversation)%></td>
+       <% if conversation.messages.last.read %>
+         <td><%= link_to recipient.first_name + " " + recipient.last_name,   conversation_messages_path(conversation)%></td>
+       <% else %>
+          <td><%= link_to recipient.first_name + " " + recipient.last_name,   conversation_messages_path(conversation)%>&nbsp <span class="badge">+</span></td>
+       <% end %>
       </tr>
      <% end %>
     <% end %>

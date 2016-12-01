@@ -15,7 +15,7 @@ def index
   end
   if @messages.last
    if last_user_id != @current_user.id
-    @messages.last.read = true;
+    @messages.last.update_attribute(:read, true)
    end
   end
   @message = @conversation.messages.new
