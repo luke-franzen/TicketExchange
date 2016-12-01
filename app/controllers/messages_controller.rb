@@ -52,6 +52,7 @@ def create
  else
  @message = @conversation.messages.new(message_params)
  @message.save
+ @message.send_email
  redirect_to conversation_messages_path(@conversation)
   
  end
