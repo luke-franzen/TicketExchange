@@ -51,8 +51,8 @@ def create
   redirect_to conversation_messages_path(@conversation)
  else
  @message = @conversation.messages.new(message_params)
- #@message.send_email
  @message.save
+ @message.send_email
  redirect_to conversation_messages_path(@conversation)
   
  end
