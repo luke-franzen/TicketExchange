@@ -48,6 +48,9 @@
     </thead>
     
     <tbody>
+      <% if @tickets.count == 0 %>
+        <h2> No tickets currently available </h2>
+      <% end %>
       <% @tickets.each do |ticket| %>
         <% user = User.find_by_id(ticket.user_id) %>
         <tr>

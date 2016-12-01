@@ -6,4 +6,22 @@ class Message < ActiveRecord::Base
  def message_time
   created_at.getlocal('-06:00').strftime("%m/%d/%y at %l:%M %p")
  end
+ 
+  # Sends email after message send.
+ def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+ end
+ 
+ def send_email
+    conversation = Conversation.find(self.conversation_id)
+    sender_id = self.user_id
+    
+    if(conversation.sender_id == sender_id)
+        email_user =  User.find(conversation.recipient_id)
+    else
+        email_user = User.find(conversation.sender_id)
+    end
+    MessageMailer.new_message(email_user).deliver_now
+ end
+    
 end

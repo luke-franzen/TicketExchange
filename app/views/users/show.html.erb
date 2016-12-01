@@ -21,7 +21,7 @@
           <% @tickets.each do |ticket| %>
             <% user = User.find_by_id(ticket.user_id) %>
             <tr>
-              <td> <%= ticket.game.name %></td>
+              <td> <%= link_to ticket.game.name, game_tickets_path(ticket.game.id), :id => "gameid_"+ticket.game.id.to_s%> </td> 
               <td> <%= ticket.ticket_type %> </td>
               <td> <%= ticket.section %> </td>
               <td> <%= ticket.row %> </td>
@@ -64,7 +64,7 @@
                   <% @sold.each do |ticket| %>
                     <% user = User.find_by_id(ticket.user_id) %>
                     <tr>
-                      <td> <%= ticket.game.name %></td>
+                      <td> <%= link_to ticket.game.name, game_tickets_path(ticket.game.id), :id => "gameid_"+ticket.game.id.to_s%> </td>
                       <td> <%= ticket.ticket_type %> </td>
                       <td> <%= ticket.section %> </td>
                       <td> <%= ticket.row %> </td>
