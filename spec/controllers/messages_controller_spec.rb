@@ -48,6 +48,12 @@ RSpec.describe MessagesController, type: :controller do
         it 'should create a new message' do
             allow(@conversation).to receive(:messages).and_return(Message.all)
             allow(@message).to receive(:save).and_return(true)
+            allow(@message).to receive(:send_email).and_return(true)
+            
+            convo = Conversation.new(id: 1, sender_id: 5, recipient_id: 1, created_at: "2016-12-01 02:46:08", updated_at: "2016-12-01 02:46:08")
+            u1 = User.new( id: 1, first_name: "jack", last_name: "sparrow", email: "jack_sparrow@gmail.com")
+            allow(Conversation).to receive(:find).and_return(convo)
+            allow(User).to receive(:find).and_return(u1)
             conversation = double({:conversation_id => 1, :sender_id => 1, :recipient_id => 5, created_at: "2016-11-14 18:43:55", updated_at: "2016-11-14 18:43:55"})
             controller.instance_variable_set(:@conversation, conversation)
             post :create, {:conversation_id => 1, :current_user => @current_user, :message => {:body => "h", user_id: 1}}
