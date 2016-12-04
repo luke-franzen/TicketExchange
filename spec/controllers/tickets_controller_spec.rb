@@ -6,7 +6,7 @@ RSpec.describe TicketsController, type: :controller do
     before(:each) do
         @game = Game.new({:id => 1, :name => "Iowa State Cyclones", :date => "10-Sep-2016"})
         @current_user = User.new({ :id => 1, :first_name => "John", :last_name => "Smith", :email => "jsmith@gmail.com"})
-        @ticket = Ticket.new({:id => 1, :user_id => 1, :game_id => 1, :price => 40, :sold => true, :ticket_type => "student"})
+        @ticket = Ticket.new({:id => 1, :user_id => 1, :game_id => 1, :price => 40, :sold => true, :ticket_type => "student", :section => "C", :row => "22", :seat => "45"})
         allow(Game).to receive(:find_by_id).with("1").and_return(@game)
         allow(Ticket).to receive(:find_by_id).with("1").and_return(@ticket)
         controller.instance_variable_set(:@current_user, @current_user)
