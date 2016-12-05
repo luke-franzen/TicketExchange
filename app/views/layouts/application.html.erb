@@ -36,7 +36,7 @@
              <% if currentuser_is_admin? %>
               <li> <%= link_to "Add Game", new_game_path, :id => "add-game-btn" %></li>
             <% end %>
-            <li><%= link_to "Sell your Ticket", new_ticket_url, :id => "sell-ticket-btn"%></li>
+            <li><%= link_to "Sell Ticket", new_ticket_url, :id => "sell-ticket-btn"%></li>
           <% else %>
             <li><%= link_to "Sign Up/Login", new_user_url, :id => "login-link"%></li>
           <% end %>
