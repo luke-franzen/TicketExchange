@@ -26,7 +26,13 @@
      margin-bottom: 0px !important;
  }
  
- #contactUs{
+ .footer {
+  clear: both;
   margin-top: 20px;
   margin-bottom: 10px;
- }
+  text-align: center;
+}
+
+.wrapper{
+ min-height: calc(100vh - 115px);
+}
