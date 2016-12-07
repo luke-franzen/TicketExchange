@@ -68,7 +68,7 @@
             <% @average_rating = Rating.where(rated_user_id: user.id).average(:value) %>
             <% @rating_count = Rating.where(rated_user_id: user.id).count %>
             <% if @rating_count > 0 %>
-              <%= @average_rating %>
+              <%= @average_rating.round(1) %>
               (<%= @rating_count %> Ratings)
             <% end %>
           </td>
