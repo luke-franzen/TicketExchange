@@ -26,7 +26,7 @@ def index
   elsif @conversation.recipient_id == @current_user.id
    @previous_rating = (Rating.find_by rated_user_id: @conversation.sender_id, rating_user_id: @current_user.id)
    @previous_rating_value = @previous_rating.value unless @previous_rating.nil?
-   @rated_user_id = @convseration.sender_id
+   @rated_user_id = @conversation.sender_id
   else
    @previous_rating = (Rating.find_by rated_user_id: @conversation.recipient_id, rating_user_id: @current_user.id)
    @previous_rating_value = @previous_rating.value unless @previous_rating.nil?
