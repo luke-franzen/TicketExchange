@@ -70,7 +70,7 @@
                       <td> <%= ticket.row %> </td>
                       <td> <%= ticket.seat %> </td>
                       <td> $<%= '%.02f' % ticket.price %> </td>
-                      <td> <%= ticket.updated_at %></td>
+                      <td> <%= ticket.updated_at.strftime("%I:%M %p %m/%d/%y") %></td>
                     </tr>
                   <% end %>
                 </tbody>
