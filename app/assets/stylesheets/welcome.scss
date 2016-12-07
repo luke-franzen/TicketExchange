@@ -7,15 +7,37 @@
     color: white;
 }
 
+#upcomingGamesPanel{
+  width:90%;
+  margin:auto;
+}
+
+#upcomingGamesHeader{
+  
+}
+
+#quickTickets{
+  
+}
 
 #landingJumboTron{
     background-image: url("/images/KinnickBlur.jpg");
-    margin-top: -20px;
+    display:flex;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     -webkit-box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.75);
     box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.75);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    flex-direction: column;
+    justify-content: center;
+    height: -moz-calc(100vh - 65px);
+    height: -webkit-calc(100vh - 65px);
+    height: calc(100vh - 65px);
 }
 
 .white, .white a {
@@ -25,6 +47,14 @@
 .glyphicon-chevron-down{
     font-size: 50px;
     margin-top: 10px;
+}
+
+
+.anchor{
+  display: block;
+  height: 80px; /*same height as header*/
+  margin-top: -80px; /*same height as header*/
+  visibility: hidden;
 }
 
 .ui-autocomplete {
