@@ -19,7 +19,6 @@ games.each do |game|
     Game.create!(game)
 end
 
-#TODO: determine way to hash these passwords
 users = [{:first_name => "jack", :last_name => "sparrow", :email => "jack_sparrow@gmail.com", :password => "password1", :password_confirmation => "password1", :session_token => SecureRandom.urlsafe_base64, :activated => true, :activated_at => Time.zone.now},
          {:first_name => "pizza", :last_name => "hut", :email => "pizza@gmail.com", :password => "password2", :password_confirmation => "password2", :session_token => SecureRandom.urlsafe_base64, :activated => true, :activated_at => Time.zone.now},
          {:first_name => "tony", :last_name => "stark", :email => "tonystark@gmail.com", :password => "password3", :password_confirmation => "password3", :session_token => SecureRandom.urlsafe_base64, :activated => true, :activated_at => Time.zone.now},
@@ -36,6 +35,12 @@ games.each do |game|
         user_obj = User.find_by_email(user[:email])
         user_obj.tickets << Ticket.create!(:game_id => game_obj.id, :price => rnum.rand(20..120), :ticket_type => "Student", :sold => false)
     end
+end
+
+users.each do |user|
+    user_rater = User.find_by_email(user[:email])
+    user_rated = User.offset(rand(User.count)).first
+    Rating.create!(:rated_user => user_rated, :rating_user => user_rater, :value => rnum.rand(1..5))
 end
 
 #demento = Physician.find_by_name('Dr. Demento'}

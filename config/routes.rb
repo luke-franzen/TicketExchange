@@ -14,6 +14,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   resources :users
+  resources :ratings do
+    collection do
+      patch :update_rating
+    end
+  end
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :account_activations, only: [:edit]

@@ -3,12 +3,12 @@ class MessagesController < ApplicationController
   before_action do
    @conversation = Conversation.find(params[:conversation_id])
   end
-  
+
 def index
  @messages = @conversation.messages
    setTitle
    setOver5
-   
+
   if params[:m]
    @over_five = false
    @messages = @conversation.messages
@@ -19,6 +19,20 @@ def index
    end
   end
   @message = @conversation.messages.new
+
+  # Get previous rating information
+  if @conversation.recipient_id == @conversation.sender_id
+   @cannot_rate = true
+  elsif @conversation.recipient_id == @current_user.id
+   @previous_rating = (Rating.find_by rated_user_id: @conversation.sender_id, rating_user_id: @current_user.id)
+   @previous_rating_value = @previous_rating.value unless @previous_rating.nil?
+   @rated_user_id = @convseration.sender_id
+  else
+   @previous_rating = (Rating.find_by rated_user_id: @conversation.recipient_id, rating_user_id: @current_user.id)
+   @previous_rating_value = @previous_rating.value unless @previous_rating.nil?
+   @rated_user_id = @conversation.recipient_id
+  end
+  @previous_rating_value |= 0
 end
 
 def last_user_id
@@ -54,7 +68,7 @@ def create
  @message.save
  @message.send_email
  redirect_to conversation_messages_path(@conversation)
-  
+
  end
 end
 

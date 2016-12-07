@@ -32,13 +32,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails'
 gem 'jquery-ui-rails'
 gem 'rails-jquery-autocomplete'
 
 gem 'jquery-tablesorter'
 
 gem 'chartkick'
-
 
 
 group :development, :test do

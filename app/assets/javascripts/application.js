@@ -18,6 +18,7 @@
 //= require jquery-tablesorter
 
 //= require jquery-tablesorter/jquery.tablesorter
+//= require jquery.raty.min
 
 //= require highcharts
 //= require chartkick
