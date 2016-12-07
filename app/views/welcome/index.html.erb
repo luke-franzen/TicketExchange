@@ -31,7 +31,7 @@
             <h2> <%= link_to game.name, game_tickets_path(game.id), :id => "gameid_"+game.id.to_s%>
                 <% if currentuser_is_admin? %>
                     <small>
-                        <%= link_to "Delete", game_path(game.id), method: 'delete', :data => {confirm: "Are you sure?"}, class: "btn btn-danger"%>
+                        <%= link_to "Delete", game_path(game.id), method: 'delete', :data => {confirm: "Are you sure? All tickets will be deleted."}, class: "btn btn-danger"%>
                     </small>
             </h2>
             <% end %>
