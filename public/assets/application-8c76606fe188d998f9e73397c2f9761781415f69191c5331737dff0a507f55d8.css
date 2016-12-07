@@ -1,0 +1,1130 @@
+/* line 5, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/messages.scss */
+.left {
+  float: left;
+}
+
+/* line 9, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/messages.scss */
+.right {
+  float: right;
+}
+
+/* line 13, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/messages.scss */
+#message_text_area {
+  resize: vertical;
+  overflow: auto;
+}
+/* line 10, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+input[type="text"],
+input[type="password"],
+textarea,
+textarea.form-control {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #fff;
+  border: 3px solid #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #888;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 30, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+textarea,
+textarea.form-control {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 30px;
+}
+
+/* line 37, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+textarea.form-control:focus {
+  outline: 0;
+  background: #fff;
+  border: 3px solid #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 47, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder,
+textarea:-moz-placeholder, textarea.form-control:-moz-placeholder {
+  color: #888;
+}
+
+/* line 50, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder {
+  color: #888;
+}
+
+/* line 53, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder {
+  color: #888;
+}
+
+/* line 58, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #19b9e7;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 76, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn:hover {
+  opacity: 0.6;
+  color: #fff;
+}
+
+/* line 78, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn:active {
+  outline: 0;
+  opacity: 0.6;
+  color: #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 80, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: #19b9e7;
+  color: #fff;
+}
+
+/* line 82, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn:active:focus, button.btn.active:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: #19b9e7;
+  color: #fff;
+}
+
+/* line 85, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #19b9e7;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 103, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn:hover {
+  opacity: 0.6;
+  color: #fff;
+}
+
+/* line 105, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn:active {
+  outline: 0;
+  opacity: 0.6;
+  color: #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 107, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: #19b9e7;
+  color: #fff;
+}
+
+/* line 109, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+button.btn:active:focus, button.btn.active:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: #19b9e7;
+  color: #fff;
+}
+
+/* line 112, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+body {
+  background: url(../img/bg.jpg) left top repeat;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* line 122, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+strong {
+  font-weight: 500;
+}
+
+/* line 124, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+a, a:hover, a:focus {
+  color: #19b9e7;
+  text-decoration: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 130, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+h1, h2 {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: 100;
+  color: #555;
+  line-height: 50px;
+}
+
+/* line 138, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  color: #555;
+  line-height: 30px;
+}
+
+/* line 145, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 147, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+::-moz-selection {
+  background: #19b9e7;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 148, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+::selection {
+  background: #19b9e7;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 151, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.btn-link-1 {
+  display: inline-block;
+  height: 50px;
+  margin: 5px;
+  padding: 16px 20px 0 20px;
+  background: #19b9e7;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 163, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active {
+  outline: 0;
+  opacity: 0.6;
+  color: #fff;
+}
+
+/* line 165, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.btn-link-1.btn-link-1-facebook {
+  background: #4862a3;
+}
+
+/* line 166, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.btn-link-1.btn-link-1-twitter {
+  background: #55acee;
+}
+
+/* line 167, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.btn-link-1.btn-link-1-google-plus {
+  background: #dd4b39;
+}
+
+/* line 169, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.btn-link-1 i {
+  padding-right: 5px;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+/* line 176, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.btn-link-2 {
+  display: inline-block;
+  height: 50px;
+  margin: 5px;
+  padding: 15px 20px 0 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 189, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.btn-link-2:hover, .btn-link-2:focus,
+.btn-link-2:active, .btn-link-2:active:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+/***** Top content *****/
+/* line 195, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.inner-bg {
+  padding: 60px 0 80px 0;
+}
+
+/* line 199, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.top-content .description {
+  margin: 20px 0 10px 0;
+}
+
+/* line 203, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.top-content .description a:hover,
+.top-content .description a:focus {
+  border-bottom: 1px dotted #19b9e7;
+}
+
+/* line 210, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.form-top {
+  overflow: hidden;
+  padding: 0 0 0 25px;
+  background: #eee;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  text-align: left;
+}
+
+/* line 218, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.form-top-left {
+  float: left;
+  width: 75%;
+  padding-top: 25px;
+}
+
+/* line 224, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.form-top-left h3 {
+  margin-top: 0;
+}
+
+/* line 226, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.form-top-right {
+  float: left;
+  width: 25%;
+  padding-top: 5px;
+  font-size: 66px;
+  color: #ddd;
+  line-height: 100px;
+  text-align: right;
+}
+
+/* line 236, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.form-bottom {
+  padding: 25px 25px 30px 25px;
+  background: #eee;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  text-align: left;
+}
+
+/* line 243, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.form-bottom form textarea {
+  height: 100px;
+}
+
+/* line 247, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.form-bottom form button.btn {
+  width: 100%;
+}
+
+/* line 251, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.form-bottom form .input-error {
+  border-color: #19b9e7;
+}
+
+/* line 255, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/password_resets.scss */
+.middle-border {
+  min-height: 300px;
+  margin-top: 170px;
+  border-right: 1px solid #ddd;
+}
+/* line 1, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+#ticket_box {
+  padding-top: 1px;
+}
+
+/* line 4, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+.table-nonfluid {
+  width: 85% !important;
+  margin: 0px auto;
+}
+
+/* line 9, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+#ticket_table {
+  background-color: #EFEFEF;
+}
+
+/* line 13, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+#buy_button {
+  height: 30px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 22, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+#delete_button {
+  height: 30px;
+  background-color: #c70039;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 31, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+#mark_sold_button {
+  height: 30px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 40, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+#sold_tickets {
+  font-weight: 500;
+  font-size: 18px;
+  display: block;
+  padding-top: 10px;
+}
+
+/* line 47, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+#for_sale {
+  font-weight: 500;
+  font-size: 18px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+/* line 54, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+#chart {
+  margin: auto;
+  width: 85% !important;
+  padding-bottom: 10px;
+}
+
+/* taken from https://github.com/Mottie/tablesorter/blob/master/css/theme.default.css*/
+/* line 62, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+.tablesorter-default .header,
+.tablesorter-default .tablesorter-header {
+  background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+  background-position: center right;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  white-space: normal;
+  padding: 4px 20px 4px 4px;
+}
+
+/* line 71, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+  background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+  border-bottom: #000 2px solid;
+}
+
+/* line 77, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+  background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+  border-bottom: #000 2px solid;
+}
+
+/* line 84, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/tickets.scss */
+.tablesorter-default thead .sorter-false {
+  background-image: none;
+  cursor: default;
+  padding: 4px;
+}
+/* line 6, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+input[type="text"],
+input[type="password"],
+textarea,
+textarea.form-control {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #fff;
+  border: 3px solid #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #888;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 26, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+textarea,
+textarea.form-control {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 30px;
+}
+
+/* line 33, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+textarea.form-control:focus {
+  outline: 0;
+  background: #fff;
+  border: 3px solid #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 43, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder,
+textarea:-moz-placeholder, textarea.form-control:-moz-placeholder {
+  color: #888;
+}
+
+/* line 46, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder {
+  color: #888;
+}
+
+/* line 49, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder {
+  color: #888;
+}
+
+/* line 54, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #19b9e7;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 72, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn:hover {
+  opacity: 0.6;
+  color: #fff;
+}
+
+/* line 74, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn:active {
+  outline: 0;
+  opacity: 0.6;
+  color: #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 76, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: #19b9e7;
+  color: #fff;
+}
+
+/* line 78, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn:active:focus, button.btn.active:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: #19b9e7;
+  color: #fff;
+}
+
+/* line 81, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn {
+  height: 50px;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: middle;
+  background: #19b9e7;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 99, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn:hover {
+  opacity: 0.6;
+  color: #fff;
+}
+
+/* line 101, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn:active {
+  outline: 0;
+  opacity: 0.6;
+  color: #fff;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 103, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: #19b9e7;
+  color: #fff;
+}
+
+/* line 105, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+button.btn:active:focus, button.btn.active:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: #19b9e7;
+  color: #fff;
+}
+
+/* line 108, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+body {
+  background: url(../img/bg.jpg) left top repeat;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* line 118, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+strong {
+  font-weight: 500;
+}
+
+/* line 120, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+a, a:hover, a:focus {
+  color: #19b9e7;
+  text-decoration: none;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+/* line 126, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+h1, h2 {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: 100;
+  color: #555;
+  line-height: 50px;
+}
+
+/* line 134, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  color: #555;
+  line-height: 30px;
+}
+
+/* line 141, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 143, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+::-moz-selection {
+  background: #19b9e7;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 144, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+::selection {
+  background: #19b9e7;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 147, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.btn-link-1 {
+  display: inline-block;
+  height: 50px;
+  margin: 5px;
+  padding: 16px 20px 0 20px;
+  background: #19b9e7;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 159, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active {
+  outline: 0;
+  opacity: 0.6;
+  color: #fff;
+}
+
+/* line 161, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.btn-link-1.btn-link-1-facebook {
+  background: #4862a3;
+}
+
+/* line 162, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.btn-link-1.btn-link-1-twitter {
+  background: #55acee;
+}
+
+/* line 163, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.btn-link-1.btn-link-1-google-plus {
+  background: #dd4b39;
+}
+
+/* line 165, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.btn-link-1 i {
+  padding-right: 5px;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+/* line 172, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.btn-link-2 {
+  display: inline-block;
+  height: 50px;
+  margin: 5px;
+  padding: 15px 20px 0 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 185, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.btn-link-2:hover, .btn-link-2:focus,
+.btn-link-2:active, .btn-link-2:active:focus {
+  outline: 0;
+  opacity: 0.6;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+/***** Top content *****/
+/* line 191, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.inner-bg {
+  padding: 60px 0 80px 0;
+}
+
+/* line 195, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.top-content .description {
+  margin: 20px 0 10px 0;
+}
+
+/* line 199, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.top-content .description a:hover,
+.top-content .description a:focus {
+  border-bottom: 1px dotted #19b9e7;
+}
+
+/* line 206, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.form-top {
+  overflow: hidden;
+  padding: 0 0 0 25px;
+  background: #eee;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  text-align: left;
+}
+
+/* line 214, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.form-top-left {
+  float: left;
+  width: 75%;
+  padding-top: 25px;
+}
+
+/* line 220, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.form-top-left h3 {
+  margin-top: 0;
+}
+
+/* line 222, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.form-top-right {
+  float: left;
+  width: 25%;
+  padding-top: 5px;
+  font-size: 66px;
+  color: #ddd;
+  line-height: 100px;
+  text-align: right;
+}
+
+/* line 232, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.form-bottom {
+  padding: 25px 25px 30px 25px;
+  background: #eee;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  text-align: left;
+}
+
+/* line 239, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.form-bottom form textarea {
+  height: 100px;
+}
+
+/* line 243, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.form-bottom form button.btn {
+  width: 100%;
+}
+
+/* line 247, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.form-bottom form .input-error {
+  border-color: #19b9e7;
+}
+
+/* line 251, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/users.scss */
+.middle-border {
+  min-height: 300px;
+  margin-top: 170px;
+  border-right: 1px solid #ddd;
+}
+#landingMoto {
+  margin-bottom: 80px;
+  margin-top: 60px;
+  color: white; }
+
+#landingJumboTron {
+  background-image: url("/images/KinnickBlur.jpg");
+  margin-top: -20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.75); }
+
+.white, .white a {
+  color: #fff; }
+
+.glyphicon-chevron-down {
+  font-size: 50px;
+  margin-top: 10px; }
+
+#index_delete_button {
+  background-color: #d9534f; }
+
+#h2.index_delete_button {
+  color: white; }
+
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  _width: 160px;
+  padding: 4px 0;
+  margin: 2px 0 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px; }
+  .ui-autocomplete .ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap; }
+    .ui-autocomplete .ui-menu-item > a.ui-corner-all.ui-state-hover, .ui-autocomplete .ui-menu-item > a.ui-corner-all.ui-state-active {
+      color: #ffffff;
+      text-decoration: none;
+      background-color: #0088cc;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      background-image: none; }
+
+/*# sourceMappingURL=welcome.css.map */
+/* line 4, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+#landingMoto {
+  margin-bottom: 80px;
+  margin-top: 60px;
+  color: white;
+}
+
+/* line 10, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+#upcomingGamesPanel {
+  width: 90%;
+  margin: auto;
+}
+
+/* line 23, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+#landingJumboTron {
+  background-image: url("/images/KinnickBlur.jpg");
+  display: flex;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 11px -1px rgba(0, 0, 0, 0.75);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  flex-direction: column;
+  justify-content: center;
+  height: -moz-calc(100vh - 65px);
+  height: -webkit-calc(100vh - 65px);
+  height: calc(100vh - 65px);
+}
+
+/* line 43, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+.white, .white a {
+  color: #fff;
+}
+
+/* line 47, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+.glyphicon-chevron-down {
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+/* line 53, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+.anchor {
+  display: block;
+  height: 80px;
+  /*same height as header*/
+  margin-top: -80px;
+  /*same height as header*/
+  visibility: hidden;
+}
+
+/* line 60, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  _width: 160px;
+  padding: 4px 0;
+  margin: 2px 0 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+}
+/* line 89, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+.ui-autocomplete .ui-menu-item > a.ui-corner-all {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #555555;
+  white-space: nowrap;
+}
+/* line 98, /home/ubuntu/workspace/TicketExchange/app/assets/stylesheets/welcome.scss */
+.ui-autocomplete .ui-menu-item > a.ui-corner-all.ui-state-hover, .ui-autocomplete .ui-menu-item > a.ui-corner-all.ui-state-active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0088cc;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  background-image: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ 
+ .up50{
+     margin-top: 50px;
+ }
+ 
+ .up65{
+     margin-top: 65px;
+ }
+ 
+ .alert{
+     margin-bottom: 0px !important;
+ }
