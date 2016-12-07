@@ -31,10 +31,9 @@
             <h2> <%= link_to game.name, game_tickets_path(game.id), :id => "gameid_"+game.id.to_s%>
                 <% if currentuser_is_admin? %>
                     <small>
-                        <%= button_tag(type:'submit') do %>
-                        <%= link_to "Delete", game_path(game.id), method: 'delete'%>
+                        <%= link_to "Delete", game_path(game.id), method: 'delete', class: "btn btn-danger"%>
                     </small>
-                <% end %>
+            
             </h2>
             <% end %>
         <%end%>
