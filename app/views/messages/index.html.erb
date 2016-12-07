@@ -6,6 +6,7 @@
   <div class="form-top">
     <div class="col-sm-offset-3">
     <%= javascript_tag do %>
+      $('#star').empty();
       $('#star').raty({
         score: <%= @previous_rating_value %>,
         path: '/assets',
