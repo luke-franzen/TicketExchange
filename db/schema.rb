@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120025747) do
+ActiveRecord::Schema.define(version: 20161202180559) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
@@ -39,14 +39,27 @@ ActiveRecord::Schema.define(version: 20161120025747) do
   add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
   add_index "messages", ["user_id"], name: "index_messages_on_user_id"
 
+  create_table "ratings", force: :cascade do |t|
+    t.integer  "rated_user_id"
+    t.integer  "rating_user_id"
+    t.integer  "value"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "ratings", ["rated_user_id", "rating_user_id"], name: "index_ratings_on_rated_user_id_and_rating_user_id", unique: true
+
   create_table "tickets", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "game_id"
-    t.integer  "price"
+    t.float    "price"
     t.string   "ticket_type"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "sold"
+    t.string   "section"
+    t.string   "row"
+    t.integer  "seat"
   end
 
   add_index "tickets", ["game_id"], name: "index_tickets_on_game_id"

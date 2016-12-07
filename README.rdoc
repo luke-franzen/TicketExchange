@@ -32,7 +32,7 @@ Ctrl-c
 Have fun. :)
 
 
-Heroku URL: https://shielded-plains-76564.herokuapp.com/ 
+Heroku URL: http://iowa-ticket-exchange.herokuapp.com/
 
 
 =end

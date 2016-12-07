@@ -9,6 +9,9 @@
           <tr>
             <th style="text-align:center" class="ticketGame" colspan="1">Game</th>
             <th style="text-align:center" class="ticketType" colspan="1">Ticket Type</th>
+            <th style="text-align:center" class="section" colspan="1">Section</th>
+            <th style="text-align:center" class="row" colspan="1">Row</th>
+            <th style="text-align:center" class="seat" colspan="1">Seat</th>
             <th style="text-align:center" colspan="1">Price</th>
             <th style="text-align:center" class="actionsHeader" colspan="1">Actions</th>
           </tr>
@@ -18,8 +21,11 @@
           <% @tickets.each do |ticket| %>
             <% user = User.find_by_id(ticket.user_id) %>
             <tr>
-              <td> <%= ticket.game.name %></td>
+              <td> <%= link_to ticket.game.name, game_tickets_path(ticket.game.id), :id => "gameid_"+ticket.game.id.to_s%> </td> 
               <td> <%= ticket.ticket_type %> </td>
+              <td> <%= ticket.section %> </td>
+              <td> <%= ticket.row %> </td>
+              <td> <%= ticket.seat %> </td>
               <td> $<%= '%.02f' % ticket.price %> </td>
               <% if @user != @current_user %>
                 <td><%= link_to '<button type="button" id="buy_button">Buy Me</button>'.html_safe, conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: 'post'%></td>
@@ -47,6 +53,9 @@
                   <tr>
                     <th style="text-align:center" class="ticketGame" colspan="1">Game</th>
                     <th style="text-align:center" class="ticketType" colspan="1">Ticket Type</th>
+                    <th style="text-align:center" class="section" colspan="1">Section</th>
+                    <th style="text-align:center" class="row" colspan="1">Row</th>
+                    <th style="text-align:center" class="seat" colspan="1">Seat</th>
                     <th style="text-align:center" colspan="1">Price</th>
                     <th style="text-align:center" class="actionsHeader" colspan="1">Sold At</th>
                   </tr>
@@ -55,8 +64,11 @@
                   <% @sold.each do |ticket| %>
                     <% user = User.find_by_id(ticket.user_id) %>
                     <tr>
-                      <td> <%= ticket.game.name %></td>
+                      <td> <%= link_to ticket.game.name, game_tickets_path(ticket.game.id), :id => "gameid_"+ticket.game.id.to_s%> </td>
                       <td> <%= ticket.ticket_type %> </td>
+                      <td> <%= ticket.section %> </td>
+                      <td> <%= ticket.row %> </td>
+                      <td> <%= ticket.seat %> </td>
                       <td> $<%= '%.02f' % ticket.price %> </td>
                       <td> <%= ticket.updated_at %></td>
                     </tr>

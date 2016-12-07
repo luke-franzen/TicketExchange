@@ -1,9 +1,25 @@
 <%= javascript_include_tag 'live-chat' %>
 <h1>Message: <%= @message_title %></h1>
+<p> Rate User: <span id="star"></span></p>
 <h4>Here is where you come up with a meeting place, time, and payment method.</h4>
 <div class="form-box">
   <div class="form-top">
     <div class="col-sm-offset-3">
+    <%= javascript_tag do %>
+      $('#star').raty({
+        score: <%= @previous_rating_value %>,
+        path: '/assets',
+        click: function(score, evt) {
+          $.ajax({
+            url: '/ratings/update_rating',
+            type: 'PATCH',
+            data: { value: score,
+                    rated_user: <%= @rated_user_id %>
+                  }
+          });
+        }
+      });
+    <% end %>
     <div class="col-xs-6 text-left">
       <%= button_to "Close", conversations_path, :method => :get, :class => 'btn btn-primary', :type => 'submit'%>
     </div>
@@ -51,17 +67,22 @@
   </div>
   </div>
   </div>
-   
+
  <% end %>
 <% end %>
+<% if @messages.last.read && @messages.last.user_id == @current_user.id%>
+<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+  <p class="text-right text-muted">read</p>
+</div>
+<%end%>
 </div>
 
 <%= form_for [@conversation, @message], html: {} do |f| %>
- <%= f.text_field :user_id, value: @current_user.id, type: "hidden" %> 
+ <%= f.text_field :user_id, value: @current_user.id, type: "hidden" %>
      <div class="input-group input-group-lg form-inline col-xs-12 col-sm-6 col-sm-offset-3">
      <%= f.text_area :body, class: "form-control", :placeholder => "Enter Message", id: "message_text_area", :required => true %>
           <span class="input-group-btn">
-            <%= button_tag("Send", :type => 'submit', :class => 'btn') do%>  
+            <%= button_tag("Send", :type => 'submit', :class => 'btn') do%>
            <i class="glyphicon glyphicon-send"></i>
       <% end %>
           </span>

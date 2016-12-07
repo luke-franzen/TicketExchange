@@ -1,0 +1,33 @@
+<div>
+    <div class="top-content">
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                	<div class="form-box" style="text-align:center">
+                    	<div class="form-top">
+                    		<div class="form-top-left">
+                    			<h3>Add Game to Database</h3>
+                    		</div>
+                        </div>
+                        <div class="form-bottom">
+    	                    <%= form_for(@game) do |f| %>
+		                    	<div class="form-group">
+		                    		<%= f.label("Opposing Team") %><br>
+		                    		<%= f.text_field(:name, id: "game_name_input", required:true, placeholder:"Iowa State Cyclones") %>
+		                    	</div>
+		                    	<div class="form-group">
+		                    		<%= f.label("Game Date") %><br>
+		                    		<%= f.text_field(:date, id: "game_date_input", required:true, placeholder:"22-Oct-2016") %>
+		                    	</div>
+		                    	<%= button_tag("Add to Database", :type => 'submit', :class => 'btn') %>
+		                    <% end %>
+	                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

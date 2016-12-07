@@ -1,7 +1,11 @@
 class User < ActiveRecord::Base
-    has_many :tickets
+    has_many :tickets, :dependent => :destroy
     has_many :games, :through => :tickets
     has_many :conversations, :foreign_key => :sender_id
+
+    has_many :ratings
+    has_many :rated_users, through: :ratings, class_name: "User", foreign_key: :rating_user_id
+    has_many :rating_users, through: :ratings, class_name: "User", foreign_key: :rated_user_id
 
     attr_accessor :activation_token, :reset_token
 
