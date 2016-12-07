@@ -2,7 +2,7 @@
     <div class="container" background="http://pictures.replayphotos.com/images/IOWA/lg/university-of-iowa-panoramas-automatically-imported-penn-state-v-iowa-iowa-p-auto-00020lg.jpg">
         <div class="featurette">
             <div class="featurette-inner text-center">
-                <h1 id="landingMoto">Where Hawkeyes can buy and sell tickets</h1>
+                <h1 id="landingMoto">Where Hawkeyes buy and sell tickets</h1>
                 <%= form_tag welcome_search_game_path, method: "post", class: "search" do %>
                      <div class="input-group input-group-lg form-inline">
                         <%= text_field_tag :search_game, params[:searh_game], data: { autocomplete: autocomplete_game_name_games_path }, class: "form-control", style: "text-align: center",  placeholder: "Search for Game" %>
@@ -14,15 +14,16 @@
                                 </span>
                      </div>
                 <% end %>
-                <%= link_to "/#quickTickets" do %>
+                <%= link_to "/#upcomingGames" do %>
                     <i class="glyphicon glyphicon-chevron-down white"></i>
                 <% end %>
             </div>
         </div>
     </div>
 </div>
-<div class="panel panel-default">
-    <div class="panel-heading">
+<span class="anchor" id="upcomingGames"></span>
+<div class="panel panel-default" id="upcomingGamesPanel">
+    <div class="panel-heading" id="upcomingGamesHeader">
 	    <h3>Upcoming Games</h3>
     </div>
     <div class="container " id="quickTickets">
