@@ -26,6 +26,10 @@
      margin-bottom: 0px !important;
  }
  
+ #MainContent{
+  padding-top: 1px;
+ }
+ 
  .footer {
   clear: both;
   margin-top: 20px;
