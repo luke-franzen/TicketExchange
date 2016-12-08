@@ -14,11 +14,11 @@
     	                    <%= form_for(@game) do |f| %>
 		                    	<div class="form-group" id="gameForm">
 		                    		<%= f.label("Opposing Team") %><br>
-		                    		<%= f.text_field(:name, id: "game_name_input", required:true, placeholder:"Iowa State Cyclones") %>
+		                    		<%= f.text_field(:name, id: "game_name_input", required:true, placeholder:"Iowa State Cyclones", class: "form-control") %>
 		                    	</div>
 		                    	<div class="form-group">
 		                    		<%= f.label("Game Date") %><br>
-		                    		<%= f.text_field(:date, id: "game_date_input", required:true, placeholder:"22-Oct-2016") %>
+		                    		<%= f.text_field(:date, id: "game_date_input", required:true, placeholder:"22-Oct-2016", class: "form-control") %>
 		                    	</div>
 		                    	<%= button_tag("Add to Database", :type => 'submit', :class => 'btn') %>
 		                    <% end %>
