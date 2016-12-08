@@ -25,15 +25,15 @@
 								<div class="section-details" style="display:none">
 									<div class="form-group" style="display:inline-block">
 										<%= f.label(:section, "Section") %><br>
-			                    		<%= f.text_field :section, :size => 1, :maxlength => 40 %>
+			                    		<%= f.text_field :section, :size => 1, :maxlength => 40, :class => 'form-control' %>
 									</div>
 									<div class="form-group" style="display:inline-block">
 										<%= f.label(:row, "Row") %><br>
-			                    		<%= f.text_field :row, :size => 1, :maxlength => 20 %>
+			                    		<%= f.text_field :row, :size => 1, :maxlength => 20, :class => 'form-control' %>
 									</div>
 									<div class="form-group" style="display:inline-block">
 										<%= f.label(:seat, "Seat") %><br>
-			                    		<%= f.text_field(:seat,:size => 1, :maxlength => 10) %>
+			                    		<%= f.text_field(:seat,:size => 1, :maxlength => 10, :class => 'form-control') %>
 									</div>
 								</div>
 								<div class="form-group">
