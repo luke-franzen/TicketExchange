@@ -10,4 +10,9 @@ Iteration 2:
     However, the baseline was met and it is fully functional. Once again, we ran into issues with testing.
     We will once again, focus on testing earlier.
     
+Iteration 3:
+    With a great focus on testing, we improved this sprint.  All goals were finished. The issue with this sprint
+    came down to last minute polish and bugs that were unexpected.  There was a few hours where lots of little 
+    changes were made to fix bugs that came down to a single line.  This was the challenge for this this sprint.
+    
     

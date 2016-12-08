@@ -22,11 +22,19 @@
       });
     <% end %>
     <div class="col-xs-6 text-left" id="closeButtonTop">
-      <%= button_to "Close", conversations_path, :method => :get, :class => 'btn btn-info', :type => 'submit'%>
+      <%= link_to(conversations_url) do %>
+        <%= button_tag(:type => 'button', :class => 'btn btn-info') do %>
+          <i class="glyphicon glyphicon-remove"></i> Close
+        <% end %>
+      <% end %>
     </div>
 <% if @over_five %>
   <div class="col-xs-6" id="previousMessages">
-     <%= link_to 'Previous Messages', '?m=all', :class => "btn"%>
+     <%= link_to('?m=all') do %>
+        <%= button_tag(:type => 'button', :class => 'btn-link') do %>
+          <i class="glyphicon glyphicon-repeat"></i> Previous Messages
+        <% end %>
+      <% end %>
   </div>
 <% end %>
 </div>
@@ -84,8 +92,8 @@
      <%= f.text_area :body, class: "form-control", :placeholder => "Enter Message", id: "message_text_area", :required => true %>
           <span class="input-group-btn">
             <%= button_tag("Send", :type => 'submit', :class => 'btn') do%>
-           <i class="glyphicon glyphicon-send"></i>
-      <% end %>
+               <i class="glyphicon glyphicon-send"></i>
+            <% end %>
           </span>
     </div>
 <% end %>
