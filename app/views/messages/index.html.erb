@@ -21,11 +21,11 @@
         }
       });
     <% end %>
-    <div class="col-xs-6 text-left">
-      <%= button_to "Close", conversations_path, :method => :get, :class => 'btn btn-primary', :type => 'submit'%>
+    <div class="col-xs-6 text-left" id="closeButtonTop">
+      <%= button_to "Close", conversations_path, :method => :get, :class => 'btn btn-info', :type => 'submit'%>
     </div>
 <% if @over_five %>
-  <div class="col-xs-6">
+  <div class="col-xs-6" id="previousMessages">
      <%= link_to 'Previous Messages', '?m=all', :class => "btn"%>
   </div>
 <% end %>
