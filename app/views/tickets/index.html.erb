@@ -27,7 +27,7 @@
   <% @soldTickets.each do |ticket| %>
     <% sold[ticket.updated_at]=ticket.price %>
   <% end %>
-  <div id="chart"><%= line_chart(sold) %></div>
+  <div id="chart"><%= line_chart(sold, xtitle: "Time Sold", ytitle: "Price") %></div>
 
 
 
